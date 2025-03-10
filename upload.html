@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>آپلود عکس</title>
+
+</head>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  current">
+              <a href="upload.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> آپلود عکس
+              </a>
+            </li>
+            <li class="nav-item  ">
+              <a href="dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-shopping-cart  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+              <button
+                  class="btn btn-sm btn-outline-secondary"
+                  type="button"
+                  id="imageUpload"
+              >
+                  آپلود عکس
+              </button>
+          </div>
+          <div class="custom-file">
+              <input
+                  type="file"
+                  class="custom-file-input"
+                  id="selectedImage"
+              />
+              <label
+                  id="imageStatus"
+                  class="custom-file-label text-center"
+                  for="selectedImage"
+              >
+                  عکس مورد نظر را انتخاب کنید
+              </label>
+          </div>
+      </div>
+      <div id="progressDiv" style="display: none;">
+          <div class="progress" >
+              <div id="progress_bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+      </div>
+      <div class="bg-light w-100 text-center">
+          <p id="uploadResult" class="overflow-auto">آدرس عکس آپلود شده</p>
+          <p id="piccount"></p>
+          <div class="input-group">
+            <label for="offset" id="offl" class="form-control col-3">نمایش از</label>
+            <input class="form-control col-2" placeholder="" type="number" name="" id="offset" >
+            <label for="limit" id="offl" class="form-control col-3 bg-muted">چندتا بعد </label>
+            <input class="form-control col-2" placeholder="" type="number" name="" id="limit">
+            <button class="btn- btn-info col-2" id="reporthandler">گزارش </button>
+          </div>
+        </div>
+
+      </div>
+      
+      <div id="allpic" class="alert alert-info row"></div>
+      
+      
+      
+           
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+
+  if(!localStorage.token)location.assign('./index.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+  
+  const url = localStorage.getItem('url')
+    document.getElementById("imageUpload").onclick = function () {
+    let xhttp = new XMLHttpRequest(); // create new AJAX request
+
+    const selectedImage = document.getElementById('selectedImage')
+    const imageStatus = document.getElementById('imageStatus')
+    const progressDiv = document.getElementById('progressDiv')
+    const progress_bar = document.getElementById('progress_bar')
+    const uploadResult = document.getElementById('uploadResult')
+
+    xhttp.onreadystatechange = function () {
+        if (xhttp.status === 200) {
+            imageStatus.innerHTML = "آپلود عکس موفقیت آمیز بود"
+            uploadResult.innerHTML = `<img src=" ${url}/img/${this.responseText}" alt="" style="width: 30px;height: 30px;"> ${url}/img/${this.responseText}`
+            allpichandler()
+            selectedImage.value = ''
+          } else {
+            imageStatus.innerHTML = this.responseText
+            
+          }
+          uploadResult.addEventListener('click',(e)=>{
+            e.stopPropagation()
+            e.preventDefault()
+            // alpert('آدرس عکس کپی شد')
+            copyhandler(this.responseText)
+          
+          })
+          
+    };
+
+    xhttp.open("POST",url+"/upload");
+
+    xhttp.upload.onprogress = function(e) {
+        if (e.lengthComputable) {
+            let result = Math.floor((e.loaded / e.total) * 100);
+            if (result != 100) {
+                progress_bar.innerHTML = result + "%"
+                progressDiv.style = 'width:'+result+"%"
+                
+            } else {
+                progressDiv.style.display = 'none'
+            }
+        }
+    }
+
+    let formData = new FormData();
+    if (selectedImage.files.length > 0) {
+        progressDiv.style.display = 'block'
+        formData.append("image",selectedImage.files[0]);
+        xhttp.send(formData);
+    } else {
+        imageStatus.innerHTML = 'برای آپلود باید عکسی انتخاب کنید'
+    }
+};
+const reporthandler = document.querySelector('#reporthandler')
+document.querySelector('#offset').addEventListener('click',(e)=>offset.value = '')
+document.querySelector('#limit').addEventListener('click',(e)=>limit.value = '')
+reporthandler.addEventListener('click',(e)=>{
+  e.preventDefault()
+  let allpic = JSON.parse(localStorage.pics)
+  const offset =Number( document.querySelector('#offset').value) - 1;
+  const limit = Number(document.querySelector('#limit').value)  ;
+  let data = allpic.slice(offset,(offset + limit))
+  // let dd = data.reverse()
+   piccount.innerHTML = `تعداد کل عکسها برابر است با ${data.length} و تعداد عکسهای این صفحه برابر است با: ${document.querySelector('#limit').value || 15}`
+  pictable(data)
+})
+function allpichandler(){
+  const allpic = document.querySelector('#allpic')
+  fetch(`${url}/allpic` ,{
+    headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+  })
+  .then(res=> res.json())
+  .then(data=>{
+    piccount.innerHTML = `تعداد کل عکسها برابر است با ${data.length} و تعداد عکسهای این صفحه برابر است با: ${document.querySelector('#limit').value || 15}`
+    localStorage.pics = JSON.stringify(data)
+    const d = (data.slice(data.at(-1) - 20 , 15))
+    pictable (d)
+  })
+  .catch(err=>{
+    alpert('ایرادی بوجود آمده لطفا پس از بررسی وضعیت اینترنت دوباره امتحان کنید')
+  })
+}
+function pictable (data){
+  console.log(data);
+    allpic.innerHTML =""
+    if(data.length === 0 )return allpic.innerHTML = `<h3 class="text-center">هیچ عکسی وجود ندارد</h3>`
+    data.forEach(img => {
+      allpic.insertAdjacentHTML('beforeend',`
+      <div class="col-lg-3 col-sm-5" style="height:150px;width:150px">
+        <div><img src="${url}/img/${img}" alt="" style="height:100px;width:150px"></div>
+        <div class="btn-group "style="width:150px" >
+          <button class="btn btn-danger" ondblclick="dlhandler('${img}');this.disabled=true">delete</button>
+          <button class="btn btn-primary" ondblclick="copyhandler2('${img}')">copy</button>
+        </div>
+     </div>
+      `)
+    });
+
+}
+window.addEventListener('keyup',(e)=>{
+  if(e.key == 'Enter'){
+    reporthandler.click()
+  }
+})
+
+window.addEventListener('load',allpichandler())
+function dlhandler (img){
+  fetch(`${url}/deleteimg/${img}`,{
+    headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            },
+    method : 'DELETE'
+  })
+  .then(res=>res.json())
+  .then(data=>alpert('عکس مورد نظر حذف شد'))
+  .catch(err=>alpert(err.message))
+  // alpert('عکس مورد نظر حذف شد')
+allpichandler()
+}
+
+function copyhandler2(img){
+  copyhandler(img)
+// alpert('آدرس عکس کپی شد')
+
+}
+function copyhandler(img){
+  if(window.navigator.clipboard){
+window.navigator.clipboard.writeText(`${url}/img/${img}`)
+alpert('آدرس عکس کپی شد')
+}
+}
+
+fetch(url+'/unreadordercount' ,{
+  headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+})
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>alpert(err.message))
+
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+<script src="./index.js"></script>
+
+</body>
+</html>

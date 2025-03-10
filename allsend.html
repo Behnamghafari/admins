@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>فاکتورهای ارسال شده</title>
+</head>
+  <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+              <li class="nav-item sidebar-link ">
+                  <a href="./newcategory.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cubes fa-lg ml-3 "></i>گروه محصول
+                  </a>
+                </li>            
+                     <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link current">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="search" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid col-sm-12 w-100" >
+    <div class="col-12 col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+        <div class="col-12  col-lg-10 col-sm-12 col-12 col-md-12  alert alert-info row mx-auto">
+          <div  class="col-12 col-lg-10 col-sm-12 mx-auto alert alsert-info text-center">
+            <h5 id="allcount"></h5>
+          </div>
+          <div class="input-group">
+            <label for="offset" id="offl" class="form-control col-3">از ردیف</label>
+            <input class="form-control col-2" placeholder="" type="number" name="" id="offset" >
+            <label for="limit" id="offl" class="form-control col-3 bg-muted">چندتابعد</label>
+            <input class="form-control col-2" placeholder="" type="number" name="" id="limit">
+            <button class="btn- btn-info col-2" id="reporthandler">گزارش </button>
+          </div>
+        </div>
+
+        <div class=" col-lg-10 col-sm-12 col-md-12 col-12 p-0 m-0  mx-auto">
+          <table class="table table-sm table-hover table-striped text-center col-sm-12 col-md-12 col-12 w-100 p-0 m-0 ">
+            <thead class="sticky-top bg-info" style="position: sticky; top:80px;z-index: 1000;" >
+              <tr>
+                <th>ردیف</th>
+                <th>نام مشتری</th>
+                <th> تاریخ سفارش</th>
+                <th>مبلغ فاکتور</th>
+                <th> تعداد</th>
+                <th>ادمین</th>
+                <th>عملیات </th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+                           
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+
+// alpert('hello')
+
+
+
+  const url = localStorage.url
+  if(!localStorage.token)location.assign('./index.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+
+  
+
+const limit = document.querySelector('#limit').value 
+const offset = document.querySelector('#offset').value 
+const tbody = document.querySelector('#tbody')
+let count ;
+function tableHandler ( lim,off){
+  const totalprice = []
+const totalcount = []
+  let num = off-1 ?? 0
+  tbody.innerHTML = ''
+  fetch(`${url}/allsend/${lim || "20"}/${(off || "1" )- 1}` ,{
+  method:'GET' ,
+  headers : {
+    "Authorization": localStorage.token
+  }
+})
+.then(res=>res.json())
+.then(data=>{
+  console.log(data)
+  const d = data.data
+  console.log('d :' , d )
+  count = data.count
+  localStorage.allsend = JSON.stringify(data)
+  d.forEach((x ,i) => {
+    const allprice = x.factor.reduce((a,b)=>a+(b.count * b.price) ,0)
+    totalprice.push(allprice)
+    const allcount = x.factor.reduce((a,b)=>a+ b.count ,0)
+    totalcount.push(allcount)
+    console.log('x.factor.reduce((a,b)=>a+(b.count * b.price) ,0) :' , x.factor.reduce((a,b)=>a+(b.count * b.price) ,0) )
+    tbody.insertAdjacentHTML('beforeend' ,`
+    <tr id=tr_${i}>
+                <td ondblclick='showhandler("${x.factorNo}")' class="m-0 p-0">${++num}</td>
+                <td ondblclick='showhandler("${x.factorNo}")' class="m-0 p-0">${x['user.fullName']}</td>
+                <td ondblclick='showhandler("${x.factorNo}")' class="m-0 p-0">${new Date(+(x.factorNo)).toLocaleDateString('fa')}</td>
+                <td ondblclick='showhandler("${x.factorNo}")' class="m-0 p-0">${allprice.toLocaleString('fa')}</td>
+                <td ondblclick='showhandler("${x.factorNo}")' class="m-0 p-0">${allcount.toLocaleString('fa')}</td>
+                <td ondblclick='showhandler("${x.factorNo}")' class="m-0 p-0">${x['admin.fullname']}</td>
+                <td class="m-0 p-0">
+                  <i class="fa fa-eye text-success ml-2 " onclick='showhandler("${x.factorNo}")' title="نمایش"></i>
+                  <i class="fa fa-pencil text-warning ml-2"  onclick='edithandler("${x.factorNo}")' title="ویرایش"></i>
+                  <i class="fa fa-close text-danger ml-2"  ondblclick='deletehandler("${x.factorNo} " ,"${i}");this.innerHTML="صبر";this.disabled=true' title="حذف"></i>
+                  
+                  </td>
+              </tr>
+    `)
+  });
+  console.log('totalcount :' , totalcount )
+  allcount.innerHTML = `:کل فاکتورها ${data.count} و تعداد محصول :${totalcount.reduce((a,b)=>a+b ,0).toLocaleString('fa')} و مبلغ کل فروش :${totalprice.reduce((a,b)=>a+b ,0).toLocaleString('fa')}`
+
+})
+.catch(err=>console.log(err))
+}
+window.addEventListener('load', tableHandler(50,1) )
+const reporthandler = document.querySelector('#reporthandler')
+reporthandler.addEventListener('click',(e)=>{
+  e.preventDefault()
+  tableHandler(document.querySelector('#limit').value,document.querySelector('#offset').value)
+})
+const inp = document.querySelectorAll('input')
+inp.forEach(x=>{
+  x.addEventListener('click',()=>x.value = '')
+})
+window.addEventListener('keyup',(e)=>{
+  if(e.keyCode == 13){
+    reporthandler.click()
+  }
+})
+
+const search = document.querySelector('#search')
+search.addEventListener('input',(e)=>{
+  tbody.innerHTML = ''
+  const data = JSON.parse(localStorage.allsend)
+  const d = data.data
+  count = data.count
+  let num = 0
+  // allcount.innerHTML = `کل فاکتورهای ارسال شده برابر است با ${data.count}`
+  const filter = d.filter(x=>x['user.fullName'].includes(search.value))
+  console.log('fill ',filter)
+  filter.forEach((x ,i) => {
+    tbody.insertAdjacentHTML('beforeend' ,`
+    <tr>
+                <td>${++num}</td>
+                <td>${x['user.fullName']}</td>
+                <td>${x.factorNo }</td>
+                <td>${x['admin.fullname']}</td>
+                <td>عملیات</td>
+              </tr>
+    `)
+  });
+})
+
+function showhandler(x){
+  localStorage.onesend = x
+  location.assign('./showonesend.html')
+}
+function edithandler(x ,id){
+  localStorage.editid = id
+  localStorage.edino = x
+  location.assign('./editsend.html')
+
+
+}
+function deletehandler(x ,y){
+  fetch(`${url}/deleteonesend/${x}` ,{
+    method : 'DELETE' , 
+    headers : {
+    "Authorization": localStorage.token ,
+    'content-Type' : 'application/json'
+  }
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    if(data.data=== true){
+      alpert('فاکتور مورد نظر با موفقیت حذف شد')
+      const tr = "tr_"+y
+      const tt = document.querySelector(`#${tr}`)
+      tt.remove()
+    }else{
+      alpert('نقش شما مجوز این کار را ندارد فقط مدیر قادر به حذف میباشد')
+    }
+  })
+  .catch(err=>console.log(err))
+}
+
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+<script src="./index.js"></script>
+
+</body>
+</html>

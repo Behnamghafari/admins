@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+  <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./bootstarp.css" />
+    <link rel="stylesheet" href="./style.css" />
+  <title>ویرایش محصول</title>
+
+  </head>
+  <body style="direction: rtl" class="text-right rtl">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-md nabvar-light">
+      <button
+        class="navbar-toggler mb-2 bg-light"
+        data-toggle="collapse"
+        data-target="#mynav"
+      >
+        <span class="text-center">
+          <i class="fa fa-navicon"></i>
+        </span>
+      </button>
+      <div class="navbar-collapse collapse" id="mynav">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- sidbar -->
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+              <a
+                href=""
+                class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border"
+                >پنل ادمین</a
+              >
+              <div class="bottom-border pb-3">
+                <img
+                  src="./img/behnam.jpg"
+                  class="rounded-circle ml-3"
+                  style="width: 50px"
+                  alt=""
+                />
+                <a id="adminname" href="" class="text-white">بهنام غفاری</a>
+              </div>
+              <ul class="nav-bar list-unstyled flex-column mt-4" >
+                <li class="nav-item  ">
+                  <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                    <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                    <i class="fas fa-users fa-lg ml-3"></i> کاربران
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+                  </a>
+                </li>
+                   <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+                <li class="nav-item sidebar-link current">
+                  <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cubes fa-lg ml-3 "></i>ویرایش محصول
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+                  </a>
+                </li>
+                 <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+                </ul>
+            </div>
+            <!-- end sidbar -->
+            <!-- topnav -->
+            <div
+              class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <h4 class="text-light">داشبورد</h4>
+                </div>
+                <div class="col-md-5">
+                  <form action="" class="my-4 my-md-0">
+                    <div class="input-group">
+                      <button class="btn btn-white search-button">
+                        <i class="fas fa-search text-danger"></i>
+                      </button>
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form-control search-input"
+                        placeholder="جستجو"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3">
+                  <ul class="navbar-nav flex-row justify-content-between">
+                    <li class="nav-item">
+                      <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                        <i class="fas fa-comments fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                        <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+                   </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">
+                        <i class="fas fa-bell fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item mr-md-auto">
+                      <a
+                        href="#logoutModal"
+                        data-toggle="modal"
+                        class="nav-link"
+                      >
+                        <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end topnav -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navigation -->
+
+    <!-- modal -->
+    <div class="modal fade" id="logoutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>آیا میخواهید خارج شوید؟</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted">
+              در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+            <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- other code -->
+    <section>
+      <div class="container-fluid">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="row pt-md-5 mt-md-2 mb-5">
+            <div class="row mr-1 col-12 ">
+              <img
+                src=""
+                alt=""
+                id="productPhoto"
+                style="width: 100px; height: 100px; border-radius: 50%"
+              />
+            </div>
+
+            <div class="form-group mx-auto">
+              <div class="input-group row mr-1">
+                <select
+                  class="col-md-3 col-lg-2"
+                  name="photo"
+                  id="photo"
+                  class="form-control"
+                >
+                  <option value="" class="font-weight-bold">انتخاب عکس</option>
+                </select>
+                <input
+                disabled
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="col-lg-5 col-md-9 form-control font-weight-bold"
+                  placeholder="نام محصول"
+                />
+
+                <select
+                  name="catId"
+                  id="catId"
+                  class="form-control font-weight-bold"
+                ></select>
+              </div>
+              <div class="input-group row mr-1">
+                <input
+                  type="number"
+                  name="price"
+                  id="price"
+                  class="form-control font-weight-bold"
+                  placeholder="قیمت محصول"
+                />
+              
+                <select name="available" id="available">
+                  <option
+                    value="1"
+                    selected
+                    class="bg-success font-weight-bold"
+                  >
+                    قابل فروش
+                  </option>
+                  <option value="0" class="bg-danger font-weight-bold">
+                    غیر قابل فروش
+                  </option>
+                </select>
+              </div>
+
+              <input
+              type="text"
+              
+              name="type" id="type"
+              class="form-control font-weight-bold mr-1"
+              placeholder="نوع"
+            />
+              <hr />
+              <!-- newattr -->
+
+              <div id="newattrdiv">
+                
+                <h6 class="text-center">سایر خصوصیات محصول</h6>
+              </div>
+              <button id="addattrebiute" class="btn btn-success">
+                افزودن خصوصیات محصول
+              </button>
+              <hr />
+              <div id="picdiv" class="row mr-1 col-12"></div>
+
+              <select
+                name=""
+                id="morpic"
+                class="form-control"
+                onchange="morimg(this.value)"
+              >
+                <option value="">افزودن عکسهای بیشتر</option>
+              </select>
+              <br />
+              <button class="btn btn-primary form-control" id="enterProduct">
+                اعمال تغییرات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- other code -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="alert.js"></script>
+    <!--<script src="../js/popper.js"></script>-->
+    <!--<script src="../js/bootstartp.js"></script>-->
+    <script>
+  if(!localStorage.token)location.assign('./admin.html')
+
+      const adminname = document.querySelector("#adminname");
+      adminname.innerHTML = JSON.parse(localStorage.admininfo)["fullname"];
+
+      //   const url = 'http://localhost:3000'
+      const url = localStorage.url;
+      const id = localStorage.updateId;
+      let category = [];
+      let num = 0;
+      const productPhoto = document.querySelector("#productPhoto");
+      const addattrebiute = document.querySelector("#addattrebiute");
+      const newattrdiv = document.querySelector("#newattrdiv");
+      const available = document.querySelector("#available");
+      const photo = document.querySelector("#photo");
+      const name = document.querySelector("#name");
+      const price = document.querySelector("#price");
+      const type = document.querySelector("#type");
+      const picdiv = document.querySelector("#picdiv");
+      const morpic = document.querySelector("#morpic");
+      const enterProduct = document.querySelector("#enterProduct");
+      const catId = document.querySelector("#catId");
+      let allphoto = [];
+      photo.value = '#'
+      fetch(url + "/categories/", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: localStorage.getItem("token"),
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("category data: ", data);
+          data.forEach((x) => {
+            catId.insertAdjacentHTML(
+              "afterbegin",
+              `
+         <option class="opt" value= ${x.id}>${x.name}</option>
+       `
+            );
+          });
+        });
+
+      // به صورت خودکار محصولات را بعد از بارگیری صفحه نمایش می‌دهیم
+let fetchtype ;
+let fetchtypeall;
+      fetch(url + "/products/" + id, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: localStorage.getItem("token"),
+        },
+      })
+        .then((res) => {
+          if (!res.ok) {
+            return alpert("مشکلی بوجود آمده");
+          } else {
+            return res.json();
+          }
+        })
+        .then(async (data) => {
+          console.log("data", data);
+         setTimeout(()=>{
+          productPhoto.src = url + "/img/" + data.photo;
+           fetchtype = data.type.map(x=>x.type).join('/');
+           fetchtypeall = data.type
+          let fetchedpic = null;
+          available.value = data.available;
+          Object.entries(data.info).forEach(([key, value]) => {
+            console.log({ [key]: value });
+
+            newattrdiv.insertAdjacentHTML(
+              "beforeend",
+              `
+           <div class="input-group">
+               <input value='${key}'  info[nameattr[index].value]= x.value  type="text" class="nameattr form-control font-weight-bold" placeholder="عنوان خصوصیت ${++num} :" >
+               <input value='${value}' type="text" class="valueattr form-control font-weight-bold" placeholder="مقدار خصوصیت ${num} :">
+             </div>
+             `
+            );
+          });
+          available.value = data.available;          
+          catId.value = data.catId ;
+         photo.value = data.photo;
+       productPhoto.value = data.photo
+          name.value = data.name;
+          price.value = data.price;
+          type.value = fetchtype;
+         },200)
+
+          const opt = document.querySelectorAll(".opt");
+          opt.forEach((x) => {
+            if (x.value === data.catId) {
+              return x.setAttribute("selected", "true");
+            }
+          });
+      //      setTimeout(()=>{
+      //     available.value = data.available;          
+      //     catId.value = data.catId ;
+      //    photo.value = data.photo;
+      //  productPhoto.value = data.photo
+      //     name.value = data.name;
+      //     price.value = data.price;
+      //     type.value = fetchtype;
+      //    },200)
+     
+
+        data.allphoto.forEach((e) => {
+            allphoto.push(e);
+            picdiv.insertAdjacentHTML(
+              "beforeend",
+              `
+   
+   <div class=" col-md-6 col-lg-3 imdiv " id="${e}" style="height:200px;width:200px">
+     <div>
+      <img src="${url}/img/${e}" alt="" style="height:150px;width:150px">
+      </div>
+     <div class="btn-group "style="width:150px" >
+       <button class="btn btn-danger" onclick="dlhandler('${e}')">delete</button>
+       <button class="btn btn-primary" onclick="copyhandler2('${e}')">copy</button>
+     </div>
+  </div>
+  
+   `
+            );
+          });
+        })
+        .catch((err) => {
+          console.log("error", err);
+        });
+
+      catId.addEventListener("change", () => {
+        console.log("change");
+      });
+      console.log("catid", catId.value);
+      let info = {};
+      enterProduct.addEventListener("click", (e) => {
+        enterProduct.setAttribute('disabled',true)
+enterProduct.innerHTML = 'لطفا منتظر باشید'
+        e.preventDefault();
+        const nameattr = document.querySelectorAll(".nameattr");
+        const valueattr = document.querySelectorAll(".valueattr");
+        nameattr.forEach((key, index) => {
+          info[key.value] = valueattr[index].value;
+        });
+        let nm = 1000
+        const typeedited =  document.querySelector("#type").value
+        const tp = typeedited.split('/')
+        // const newtype = []
+        let newtype = fetchtypeall.filter(x=>tp.includes(x.type))
+        tp.forEach(x=>{
+          if(!newtype.some(y=>y.type == x)){
+            newtype.push({type : x ,count : 0 , id : ++nm})
+          }
+        })
+        const data = {
+          info,
+          allphoto,
+          catId: catId.value,
+          photo: photo.value,
+          name: document.querySelector("#name").value,
+          price: document.querySelector("#price").value,
+          //  url: document.querySelector('#url').value,
+          // type: document.querySelector("#type").value,
+          type: newtype,
+          available: document.querySelector("#available").value,
+          adminId: "1",
+        };
+        console.log("update data", data);
+        fetch(url + "/product/" + id, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: localStorage.getItem("token"),
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            console.log("updated data", data);
+            alpert(` با موفقیت ویرایش شد`);
+            location.assign("./allproductnew.html");
+          })
+          .catch((err) => console.log(err.message));
+      });
+
+      addattrebiute.addEventListener("click", (e) => {
+        e.preventDefault();
+        newattrdiv.insertAdjacentHTML(
+          "beforeend",
+          `
+       <div class="input-group">
+         <input  type="text" class="nameattr form-control font-weight-bold" placeholder="عنوان خصوصیت ${++num} :" >
+         <input  type="text" class="valueattr form-control font-weight-bold" placeholder="مقدار خصوصیت ${num} :">
+       </div>
+       `
+        );
+
+        const valueattr = document.querySelectorAll(".valueattr");
+        const nameattr = document.querySelectorAll(".nameattr");
+        valueattr.forEach((x, index) => {
+          x.addEventListener("change", () => {
+            info[nameattr[index].value] = x.value;
+            console.log(info);
+          });
+        });
+      });
+      photo.addEventListener("change", () => {
+        productPhoto.src = url + "/img/" + photo.value;
+      });
+
+      function morimg(e) {
+        allphoto.push(`${e}`);
+        picdiv.insertAdjacentHTML(
+          "beforeend",
+          `
+   
+     <div class=" col-md-6 col-lg-3 imdiv "id="${e}" style="height:200px;width:200px">
+       <div>
+        <img src="${url}/img/${e}" alt="" style="height:150px;width:150px">
+        </div>
+       <div class="btn-group "style="width:150px" >
+         <button class="btn btn-danger" onclick="dlhandler('${e}')">delete</button>
+         <button class="btn btn-primary" onclick="copyhandler2('${e}')">copy</button>
+       </div>
+    </div>
+    
+     `
+        );
+      }
+
+      fetch(`${url}/allpic`,{
+        headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          fetchedpic = [...data];
+          productPhoto.src = url + "/img/" + data[0];
+
+          if (data.length === 0)
+            return (photo.innerHTML = `<h3 class="text-center">هیچ عکسی وجود ندارد</h3>`);
+          data.forEach((img) => {
+            photo.insertAdjacentHTML(
+              "afterbegin",
+              `
+     <option value= '${img}'>${img}</option>
+`
+            );
+
+            morpic.insertAdjacentHTML(
+              "afterbegin",
+              `
+     <option value= '${img}'>${img}</option>
+`
+            );
+          });
+        });
+
+      function loadProducts(id) {
+        fetch(url + "/categories/" + id, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: localStorage.getItem("token"),
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            catId.insertAdjacentHTML(
+              "afterbegin",
+              `
+         <option value= ${data.id}>${data.name}</option>
+       `
+            );
+          });
+        fetch("/api/products",{
+          headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+        })
+          .then((response) => response.json())
+          .then((products) => {
+            const productList = document.getElementById("productList");
+            productList.innerHTML = "";
+
+            products.forEach((product) => {
+              const { _id, productName, price } = product;
+
+              const row = document.createElement("tr");
+
+              const nameCell = document.createElement("td");
+              nameCell.textContent = productName;
+              row.appendChild(nameCell);
+
+              const priceCell = document.createElement("td");
+              priceCell.textContent = price;
+              row.appendChild(priceCell);
+
+              const actionsCell = document.createElement("td");
+              const viewButton = createButton("View", "btn-primary", () =>
+                viewProduct(_id)
+              );
+              const editButton = createButton("Edit", "btn-warning", () =>
+                editProduct(_id)
+              );
+              const deleteButton = createButton("Delete", "btn-danger", () =>
+                deleteProduct(_id)
+              );
+              actionsCell.appendChild(viewButton);
+              actionsCell.appendChild(editButton);
+              actionsCell.appendChild(deleteButton);
+              row.appendChild(actionsCell);
+
+              productList.appendChild(row);
+            });
+          })
+          .catch((error) => console.error("Error loading products:", error));
+      }
+
+      function createButton(text, className, onClick) {
+        const button = document.createElement("button");
+        button.textContent = text;
+        button.className = `btn ${className} btn-sm mr-1`;
+        button.addEventListener("click", onClick);
+        return button;
+      }
+
+      function viewProduct(productId) {
+        // انجام عملیات مشاهده محصول با استفاده از fetch
+        fetch(`/api/products/${productId}`,{
+          headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+        })
+          .then((response) => response.json())
+          .then((product) => {
+            // نمایش محصول در یک مودال یا صفحه جداگانه
+            console.log("View Product:", product);
+          })
+          .catch((error) => console.error("Error viewing product:", error));
+      }
+
+      function editProduct(productId) {
+        // انجام عملیات ویرایش محصول با استفاده از fetch
+        fetch(`/api/products/${productId}`,{
+          headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+        })
+          .then((response) => response.json())
+          .then((product) => {
+            // نمایش فرم ویرایش محصول در یک مودال یا صفحه جداگانه
+            console.log("Edit Product:", product);
+          })
+          .catch((error) => console.error("Error editing product:", error));
+      }
+
+      function deleteProduct(productId) {
+        // انجام عملیات حذف محصول با استفاده از fetch
+        fetch(`/api/products/${productId}`, {
+          headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+           method: "DELETE" })
+          .then(() => {
+            // حذف ردیف محصول از جدول
+            const row = document.getElementById(`row-${productId}`);
+            row.remove();
+          })
+          .catch((error) => console.error("Error deleting product:", error));
+      }
+
+      function copyhandler2(img) {
+        copyhandler(img);
+        alpert("آدرس عکس کپی شد");
+      }
+
+      function copyhandler(img) {
+        if (window.navigator.clipboard) {
+          window.navigator.clipboard.writeText(`${url}/img/${img}`);
+        }
+      }
+
+      function dlhandler(img) {
+        console.log("img:\n", img);
+        const imdiv = document.getElementById(`${img}`);
+        allphoto.splice(
+          allphoto.findIndex((x) => x === img),
+          1
+        );
+        imdiv.remove();
+      }
+
+      fetch(url+'/unreadordercount',{
+        headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+      })
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+
+    </script>
+    <script src="./index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>دسته بندی</title>
+
+</head>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link ">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./newnewproduct.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i>  محصول جدید
+              </a>
+            </li>
+            <li class="nav-item sidebar-link current">
+              <a href="./newcategory.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i>  گروه محصول
+              </a>
+            </li>
+               <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+        <div class="container mt-5 col-lg-8 col-sm-12">
+          <h2>افزودن دسته بندی</h2>
+          <form id="addCategoryForm">
+            <div class="form-group">
+              <label for="categoryName">نام دسته بندی:</label>
+              <input type="text"  class="form-control" id="categoryName" required />
+            </div>
+            <button id="add" type="submit" class="btn btn-primary form-control">
+              افزودن دسته بندی
+            </button>
+          </form>
+    
+          <h2>لیست دسته بندی ها</h2>
+         
+        <table class="table table-sm table-striped table-hover">
+          <thead class="sticky-top bg-info">
+            <tr class="row bg-info">
+              <th class="col-1">ردیف</th>
+              <th class="col-4">نام دسته‌بندی</th>
+              <th class="col-4">ادمین سازنده </th>
+              <th class="col-3 text-center">عملیات</th>
+            </tr>
+          </thead>
+          <tbody  id="categoryList">
+           
+          </tbody>
+        </table>
+        
+        </div>
+           
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="alert.js"></script>
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+  if(!localStorage.token)location.assign('./index.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+   // console.log(localStorage.token);
+   const url = localStorage.url;
+   console.log('url :' , url )
+  //  alpert(localStorage.token)
+      // ارسال درخواست POST برای افزودن دسته‌بندی
+      document
+        .getElementById("addCategoryForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          add.disabled = true
+          add.innerHTML = 'لطفا صبر کنید'
+          const categoryName = document.getElementById("categoryName").value;
+          fetch(`${url}/categories`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              // Authorization: localStorage.getItem("token"),
+              Authorization: localStorage.token,
+            },
+            body: JSON.stringify({
+              name: categoryName,
+              adminId:(JSON.parse(localStorage.admininfo)['id']),
+              token: localStorage.token,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+                    add.disabled = false
+          add.innerHTML = ' افزودن دسته بندی'
+              console.log("Category added:", data);
+              // اضافه کردن دسته‌بندی به لیست
+              const categoryList = document.getElementById("categoryList");
+              const listItem = document.createElement("li");
+              listItem.className = "list-group-item";
+              listItem.appendChild(document.createTextNode(data.name));
+              categoryList.appendChild(listItem);
+              location.reload();
+            })
+            .catch((error) =>
+              console.log("Error adding category:", error.message)
+            );
+        });
+
+      // دریافت و نمایش تمام دسته‌بندی‌ها
+      fetch(url+"/categories", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: localStorage.getItem("token"),
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const categoryList = document.getElementById("categoryList");
+          if (!data)
+            return (categoryList.innerHTML = "هیچ دسته بندی وجود ندارد");
+          let num =[...data].length+1
+          data.forEach((category) => {
+            if (category.name != "undefined") {
+              categoryList.insertAdjacentHTML(
+                "afterbegin",
+                `
+                <tr class="row">
+              <td class="col-1">${--num}</td>
+              <td class="col-4"> ${category.name}</td>
+              <td class="col-4"> ${category.info?.fullname} </td>
+              <td class="col-3 text-center">
+                <button class="btn btn-sm btn-danger ml-auto" id="dlcat" 
+            style = "float:left"
+            title="حذف"><i class="fa fa-remove"></i> </button>
+        <button class="btn btn-sm btn-primary ml-auto" id="upcat"
+        style = "float:left"
+         title="ویرایش"><i class="fa fa-pencil"></i> </button>
+              </td>
+            </tr>
+
+
+
+          `
+              );
+            }
+
+            const dlcat = document.querySelector("#dlcat");
+            dlcat.addEventListener("click", function () {
+              const text =  `آیا واقعا میخواهید دسته بندی را حذف کنید؟!!!`
+              const ok =  ()=>{
+                setTimeout(()=>{
+                  alpert('صبرکنید')
+                },100)
+                fetch(`${url}/categories/${category.id}`, {
+                  method: "DELETE",
+                  headers: {
+                    Authorization: localStorage.getItem("token"),
+                  },
+                })
+                  .then((response) => {
+                    console.log("Category deleted:", category);
+                    // categoryList.removeChild(listItem);
+                    location.reload();
+                  })
+                  .catch((error) =>
+                    console.log("Error deleting category:", error)
+                  );
+              }
+                  confirmm(text,ok)
+                 
+              // if (
+              //   confirm(
+              //     `آیا واقعا میخواهید دسته بندی را حذف کنید؟!!!`
+              //   )
+              // ) {
+              //   fetch(`${url}/categories/${category.id}`, {
+              //     method: "DELETE",
+              //     headers: {
+              //       Authorization: localStorage.getItem("token"),
+              //     },
+              //   })
+              //     .then((response) => {
+              //       console.log("Category deleted:", category);
+              //       // categoryList.removeChild(listItem);
+              //       location.reload();
+              //     })
+              //     .catch((error) =>
+              //       console.log("Error deleting category:", error)
+              //     );
+              // }
+            });
+
+            const upcat = document.querySelector("#upcat");
+            upcat.addEventListener("click", function () {
+              promptt('لطفا نام دسته بندی جدید را وارد کنید ' ,(x)=>{
+                setTimeout(()=>{
+                  fetch(`${url}/categories/${category.id}`, {
+                  method: "PUT",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: localStorage.getItem("token"),
+                  },
+                  body: JSON.stringify({ name: x }),
+                })
+                  .then((response) => response.json())
+                  .then((updatedCategory) => {
+                    console.log("Category updated:", updatedCategory);
+                    // prm.style.display = 'none'
+
+                    location.reload();
+                    // listItem.removeChild(listItem.lastChild);
+                    // listItem.appendChild(document.createTextNode(updatedCategory.name));
+                  })
+                  .catch((error) =>
+                    console.log("Error updating category:", error)
+                  );
+                },100)
+              })
+                
+              // const newName = prompt(
+              //   "Enter new name for category:",
+              //   category.name
+              // );
+              // if (newName) {
+                // fetch(`${url}/categories/${category.id}`, {
+                //   method: "PUT",
+                //   headers: {
+                //     "Content-Type": "application/json",
+                //     Authorization: localStorage.getItem("token"),
+                //   },
+                //   body: JSON.stringify({ name: newName }),
+                // })
+                //   .then((response) => response.json())
+                //   .then((updatedCategory) => {
+                //     console.log("Category updated:", updatedCategory);
+                //     location.reload();
+                //     // listItem.removeChild(listItem.lastChild);
+                //     // listItem.appendChild(document.createTextNode(updatedCategory.name));
+                //   })
+                //   .catch((error) =>
+                //     console.log("Error updating category:", error)
+                //   );
+              // }
+            });
+          });
+        })
+        .catch((error) => console.log("Error fetching categories:", error));
+
+
+        fetch(url+'/unreadordercount',{
+          headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+        })
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>console.log(err));
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+<script src="./index.js"></script>
+
+</body>
+</html>

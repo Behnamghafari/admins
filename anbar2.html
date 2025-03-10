@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<title>انبار</title>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="#" c3lass="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link ">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link current">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="searchproduct" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                    <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+<div id="modall" class="modal-container" ></div>
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid m-0 p-0" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto m-0 p-0">
+      <div class="row pt-md-5 mt-md-2 mb-5 m-0 p-0">
+
+
+
+        <div class="container col-lg-10 col-md-12 " id="container">
+
+          <!-- <div> -->
+          <div class="col-12 mx-auto text-center row alert alert-secondary m-0 p-0 " id="main">
+            <button id="mainbtn" class="btn btn-primary col-8 mx-auto d-print-none m-0 p-0 " onclick="location.assign('#aaa')" >تحلیل سفارشات</button>
+            <button title="هر وقت اختلاف زیادی در موجودی انبار داشتید با زدن این دکمه موجودی همه محصولات صفر میشود و شما باید دوباره موجودی واقعی را وارد کنید" id="mainbtn" class="btn btn-danger col-4 mx-auto d-print-none m-0 p-0 " onclick="anbargardani()" >انبارگردانی</button>
+            <input id="searchinpp" class="form-control col-10 mx-auto d-lg-none d-print-none" title="جستجوی محصول"  placeholder="جستجوی محصول در انبار" type="text" name="">
+          <div class="col-12 input-group row mx-auto d-print-none"  >
+            <input type="text" class="form-control col-6" name="" id="prname" title="نام محصول" placeholder="نام محصول">
+            <input type="number" onkeyup="addbtn.disabled=false" disabled  class="form-control col-2" name="" id="prcount" title="تعداد محصول" placeholder="تعداد">
+            <button id="addbtn" class="btn btn-info col-2" disabled title="ثبت تعداد محصول">ثبت</button>
+            <button id="refresh" onclick="this.disabled = 'true' ;fetchdata()" class="btn btn-success col-2"  title="رفرش">رفرش <i class="fa fa-refresh"></i></button>
+          </div>
+          <div class="col-12 m-0 p-0" id="divadd"></div>
+
+        <!-- </div> -->
+           <div  id="mojodi" class="col-12 row m-0 p-0 ">
+           <div style="border: 3px solid " id="mmjj" class="col-12 row m-0 p-0 shadow">
+            <h5 class="w-100 text-center" id="tedada"></h5>
+            <h5 class="w-100 text-center" id="kolgheymat"></h5>
+            <table class="table table-sm table-striped table-hover " >
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام محصول</th>
+                  <th>موجودی</th>
+                  <th>قیمت</th>
+                  <th>کل</th>
+                </tr>
+              </thead>
+              <tbody id="trdata">
+              
+              </tbody>
+
+            </table>
+            <div class="col-12 row d-print-none mx-auto">
+              <button class="btn btn-warning col-8 d-print-none" onclick="mojodi3()">پرینت موجودی انبار </button>
+              <button class="btn btn-primary col-2 mx-auto d-print-none" onclick="tahlilhandler()">موجودی</button>
+              <button id="refresh12" onclick="this.disabled = 'true' ;fetchdata()" class="btn btn-success col-2  d-print-none"  title="رفرش">رفرش <i class="fa fa-refresh"></i></button>
+            </div>
+          </div>
+
+
+
+           <div id="tahlildiv" class="text-center col-12 alert alert-info m-0 p-0">
+            <h5  style="margin-top: 10px;" class="d-print-none"> گزارش تولید </h5>
+            <h6 id="todaytolid" class="d-print-none"></h6>
+            <table class="table table-sm table-striped table-hover d-print-none">
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام محصول</th>
+                  <th>تعداد </th>
+                  <th>تاریخ</th>
+                </tr>
+              </thead>
+              <tbody id="tolid">
+
+              </tbody>
+            </table>
+           <div style="border: 3px solid " class="bg-light shadow" id="prmohemm">
+            <h5  id="aaa">کسری تولید سفارشات مهم</h5>
+            <table class="table table-sm table-striped table-hover" >
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام محصول</th>
+                  <th>کسری</th>
+                </tr>
+              </thead>
+              <tbody id="tahlil">
+              
+              </tbody>
+
+            </table>
+            <div class="col-12 row d-print-none mx-auto">
+              <button class="btn btn-danger col-8 d-print-none" onclick="prmohem()">پرینت کسری سفارشات مهم</button>
+              <button class="btn btn-primary col-2 mx-auto d-print-none" onclick="tahlilhandler()">موجودی</button>
+            <button id="refresh1" onclick="this.disabled = 'true' ;fetchdata()" class="btn btn-success col-2  d-print-none"  title="رفرش">رفرش <i class="fa fa-refresh"></i></button>
+            </div>
+           </div>
+
+         
+
+           <div style="border: 3px solid " class="bg-light" id="prmohemm2">
+            <h5  id="aaa2"> کل سفارشات مهم</h5>
+            <table class="table table-sm table-striped table-hover" >
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام محصول</th>
+                  <th>تعداد</th>
+                </tr>
+              </thead>
+              <tbody id="tahlil2">
+              
+              </tbody>
+
+            </table>
+            <div class="col-12 row d-print-none mx-auto">
+              <button class="btn btn-warning col-8 d-print-none" onclick="prmohem2()">پرینت کل سفارشات مهم</button>
+              <button class="btn btn-primary col-2 mx-auto d-print-none" onclick="tahlilhandler()">موجودی</button>
+            <button id="refresh123" onclick="this.disabled = 'true' ;fetchdata()" class="btn btn-success col-2  d-print-none"  title="رفرش">رفرش <i class="fa fa-refresh"></i></button>
+            </div>
+           </div>
+
+
+
+
+
+
+
+
+
+           <div style="border: 3px solid;" id="prkoll">
+            <h5>کسری تولید کل سفارشات</h5>
+            <table class="table table-sm table-striped table-hover " >
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام محصول</th>
+                  <th>کسری</th>
+                </tr>
+              </thead>
+              <tbody id="tahl">
+              
+              </tbody>
+
+            </table>
+            <div class="col-12 row d-print-none mx-auto">
+              <button class="btn btn-info col-8 d-print-none" onclick="prkol()">پرینت کسری کل سفارشات </button>
+              <button class="btn btn-primary col-2 mx-auto d-print-none" onclick="tahlilhandler()">موجودی</button>
+            <button id="refresh2" onclick="this.disabled = 'true' ;fetchdata()" class="btn btn-success col-2  d-print-none"  title="رفرش">رفرش <i class="fa fa-refresh"></i></button>
+            </div>
+           </div>
+
+
+            <div style="border: 3px solid;" id="prsefareshatt">
+              
+            <h5>  کل سفارشات</h5>
+            <table class="table table-sm table-striped table-hover alert" >
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>نام محصول</th>
+                  <th>تعداد</th>
+                </tr>
+              </thead>
+              <tbody id="tah">
+              
+              </tbody>
+
+            </table>
+            <div class="col-12 row d-print-none mx-auto">
+              <button class="btn btn-secondary col-8 d-print-none" onclick="prsefareshat()">پرینت  کل سفارشات</button>
+              <button class="btn btn-primary col-2 mx-auto d-print-none" onclick="tahlilhandler()">موجودی</button>
+            <button id="refresh3" onclick="this.disabled = 'true' ;fetchdata()" class="btn btn-success col-2  d-print-none"  title="رفرش">رفرش <i class="fa fa-refresh"></i></button>
+            </div>
+
+          </div>
+      </div>
+      
+      <div class="container d-none" id="showproduct">   
+      </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="modall" class="modal-container"></div>
+</section>
+<!-- other code -->
+
+
+
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>-->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+
+
+
+<!-- <script src="../js/jqury.js"></script>
+<script src="../js/popper.js"></script>
+<script src="../js/bootstartp.js"></script> -->
+
+
+
+
+<script>
+
+if(!localStorage.token)location.assign('./index.html')
+
+const adminname = document.querySelector('#adminname')
+adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+
+const url = localStorage.url
+const token = localStorage.token
+const trdata = document.querySelector('#trdata')
+const addbtn = document.querySelector('#addbtn')
+const prname = document.querySelector('#prname')
+const prcount = document.querySelector('#prcount')
+const divadd = document.querySelector('#divadd')
+const searchproduct = document.querySelector('#searchproduct')
+const refresh = document.querySelector('#refresh')
+const tahlil = document.querySelector('#tahlil')
+const allp = JSON.parse(localStorage.allproduct)
+
+const anbar = JSON.parse(localStorage.getItem('anbar'))
+  const products =  Object?.keys(anbar.main ?? (alp).main  ) 
+  let pp = {}
+  let nn = {}
+  allp.forEach(x=>x.type.forEach(y=>nn[x.name + " " + y.type] = {price: +x.price}))
+  allp.forEach(x=>x.type.forEach(y=> pp[(x.name) + " " + (y.type)] = {price:+(x.price) , count : anbar.main[x.name + " "+y.type]['count'] ,total:anbar.main[x.name + " "+y.type]['count'] >0 ? anbar.main[x.name + " "+y.type]['count'] * x.price : 0}))
+  const gheymatkoll = (Object.keys(pp).map(x=>pp[x]['total']))
+    console.log('gheymatkoll :' , gheymatkoll )
+  const gheymatkol =  gheymatkoll.reduce((a,b)=>Number(a)+ Number(b) ,0)
+  kolgheymat.innerHTML = `ارزش کل محصولات برابر است با : ${gheymatkol.toLocaleString('fa')}`
+
+
+
+let alldata = null
+// fetchdata()
+prcount.addEventListener('keyup',(e)=>{
+  if(e.key == 'Enter' && prcount.value > 0 ){
+    addbtn.click()
+  }
+})
+
+const ser = ((e)=>{
+  const products = Object.keys(JSON.parse(localStorage.anbar).main);
+  const pp = JSON.parse(localStorage.getItem('anbar')).main ;
+  const filterdproducts = []
+  let obj = {}
+  const regex = new RegExp(e.target.value.split('').join('.*') ,'i')
+  products.forEach(x=>{
+    if(regex.test(x)){
+      filterdproducts.push({name:x ,count:pp[x].count})   
+    }
+  })
+  
+  trdata.innerHTML = ''
+  let num = 0
+  filterdproducts.forEach((x) => {
+    trdata.insertAdjacentHTML('beforeend' ,`
+     <tr>
+       <td>${++num}</td>
+       <td>${x.name}</td>
+       <td>${(x.count).toLocaleString('fa')}</td>
+                <td>${(nn[x.name]['price'] * 1).toLocaleString('fa')}</td>
+       <td>${( ((nn[x.name]['price']) * 1) * pp[x.name].count).toLocaleString('fa')}</td>
+
+     </tr> 
+    `)
+  });
+})
+searchproduct.addEventListener('input',ser)
+searchinpp.addEventListener('input',ser)
+
+// start search product
+prname.addEventListener("input", (e) => {
+  const products1 = Object.keys(JSON.parse(localStorage.anbar).main);
+  const pp = JSON.parse(localStorage.getItem('anbar')).main ;
+  const filterdproducts1 = []
+  let obj = {}
+  const regex1 = new RegExp(e.target.value.split('').join('.*') ,'i')
+  products1.forEach(x=>{
+    if(regex1.test(x)){
+      filterdproducts1.push({name:x ,count:pp[x].count})   
+    }
+  })
+  
+  trdata.innerHTML = ''
+  let num = 0
+  filterdproducts1.forEach((x) => {
+    console.log('pp[x.name] :' , pp[x.name] )
+    trdata.insertAdjacentHTML('beforeend' ,`
+     <tr>
+       <td>${++num}</td>
+       <td>${x.name}</td>
+       <td>${(x.count).toLocaleString('fa')}</td>
+             <td>${(nn[x.name]['price'] * 1).toLocaleString('fa')}</td>
+       <td>${( ((nn[x.name]['price']) * 1) * pp[x.name].count).toLocaleString('fa')}</td>
+
+     </tr> 
+    `)
+  });
+
+
+
+
+
+      divadd.innerHTML = "";
+      const products = Object.keys(JSON.parse(localStorage.anbar).main);
+
+      // console.log('products :' , products )
+       const filterdproducts = []
+       const regex = new RegExp(e.target.value.split('').join('.*') ,'i')
+       for (let pr of products){
+        if(regex.test(pr) && prname.value.length >0){
+          filterdproducts.push(pr)
+        }
+       }
+      filterdproducts.forEach((x) => {
+        divadd.insertAdjacentHTML(
+          "beforeend",
+          `
+    <button  onclick="prname.disabled =true;prcount.disabled=false;prname.value = '${x}' ;divadd.innerHTML = '';  prcount.focus() ;" class="btn col-12 btn-info bnm">${x}</button>
+  `
+        );
+      });
+    });
+
+    window.addEventListener('keyup',(e)=>{
+      if(e.key == 'Escape'){
+        document.querySelector('#prname').removeAttribute('disabled') 
+        prname.value = '';
+        prcount.value = '';
+        prcount.disabled = true
+        prname.focus()
+        // const bnm = document.querySelectorAll('.bnm')
+        // bnm.forEach(x=>x.style.display='none')
+      }
+    })
+
+
+    prname.addEventListener('keyup',(e)=>{
+      if(e.key == 'Escape'){
+        const bnm = document.querySelectorAll('.bnm')
+        bnm.forEach(x=>x.style.display='none')
+      }
+    })
+// end search product
+
+
+function prmohem2 (){
+  document.querySelector('#prmohemm2').classList.remove('d-print-none')
+  document.querySelector('#prkoll').classList.add('d-print-none')
+  document.querySelector('#prsefareshatt').classList.add('d-print-none')
+  document.querySelector('#prmohemm').classList.add('d-print-none')
+  document.querySelector('#mmjj').classList.add('d-print-none')
+  print()
+}
+function mojodi3 (){
+  document.querySelector('#mmjj').classList.remove('d-print-none')
+  document.querySelector('#prmohemm2').classList.add('d-print-none')
+  document.querySelector('#prkoll').classList.add('d-print-none')
+  document.querySelector('#prsefareshatt').classList.add('d-print-none')
+  document.querySelector('#prmohemm').classList.add('d-print-none')
+  print()
+}
+function prmohem (){
+  document.querySelector('#prmohemm').classList.remove('d-print-none')
+  document.querySelector('#prkoll').classList.add('d-print-none')
+  document.querySelector('#prsefareshatt').classList.add('d-print-none')
+  document.querySelector('#prmohemm2').classList.add('d-print-none')
+  document.querySelector('#mmjj').classList.add('d-print-none')
+  print()
+}
+function prkol (){
+  document.querySelector('#prkoll').classList.remove('d-print-none')
+  document.querySelector('#prmohemm2').classList.add('d-print-none')
+  document.querySelector('#prmohemm').classList.add('d-print-none')
+  document.querySelector('#prsefareshatt').classList.add('d-print-none')
+  document.querySelector('#mmjj').classList.add('d-print-none')
+  print()
+}
+
+function prsefareshat (){
+  document.querySelector('#prsefareshatt').classList.remove('d-print-none')
+  document.querySelector('#prmohemm').classList.add('d-print-none')
+  document.querySelector('#prkoll').classList.add('d-print-none')
+  document.querySelector('#prmohemm2').classList.add('d-print-none')
+  document.querySelector('#mmjj').classList.add('d-print-none')
+  print()
+}
+
+
+
+function fetchdata (){
+  tahlil.innerHTML = " "
+  tahl.innerHTML = " "
+  tah.innerHTML = " "
+fetch(url+'/anbar',{
+  headers : {
+    "Authorization": token
+  }
+})
+.then(res=>{
+  if(res.ok){
+    return res.json()
+  }else return false
+})
+.then(data=>{
+  alldata = data
+  // console.log(data);
+  localStorage.anbar = JSON.stringify(data)
+  mojodi(data)
+  refresh.disabled = false
+  refresh1.disabled = false
+  refresh2.disabled = false
+  refresh3.disabled = false
+  refresh123.disabled = false
+  alpert('اطلاعات بروزرسانی شد.')
+})
+.catch(err=>{
+  console.log(err)
+  alpert(`عملیات انجام نشد\nاتصال اینتزنت خود را چک کنید و دوباره امتحان کنید`+ err.message)
+  refresh.disabled = false
+  refresh1.disabled = false
+  refresh2.disabled = false
+  refresh3.disabled = false
+  refresh123.disabled = false
+})
+}    
+
+ 
+async function alp (){
+  const ress =  await fetch(url+'/anbar',{
+  headers : {
+    "Authorization": token
+  }
+})
+const dtt = await ress.json() ;
+  console.log('dtt :' , dtt )  
+  localStorage.setItem('anbar' ,JSON.stringify(dtt))
+  return dtt
+}
+
+async function mojodi(data){
+  try {
+
+    const allp = JSON.parse(localStorage.allproduct)
+
+const anbar = JSON.parse(localStorage.getItem('anbar'))
+  const products =  Object?.keys(data.main ?? (alp).main  ) 
+  let pp = {}
+  let nn = {}
+  allp.forEach(x=>x.type.forEach(y=>nn[x.name + " " + y.type] = {price: +x.price}))
+  allp.forEach(x=>x.type.forEach(y=> pp[(x.name) + " " + (y.type)] = {price:+(x.price) , count : data.main[x.name + " "+y.type]['count'] ,total:data.main[x.name + " "+y.type]['count'] >0 ? data.main[x.name + " "+y.type]['count'] * x.price : 0}))
+  const gheymatkoll = (Object.keys(pp).map(x=>pp[x]['total']))
+    console.log('gheymatkoll :' , gheymatkoll )
+  const gheymatkol =  gheymatkoll.reduce((a,b)=>Number(a)+ Number(b) ,0)
+  kolgheymat.innerHTML = `ارزش کل محصولات برابر است با : ${gheymatkol.toLocaleString('fa')}`
+
+
+
+
+
+
+
+
+  trdata.innerHTML = ''
+  let num = 0
+
+    tedada.innerHTML = 'تعداد محصولات برابر است با: '+  Object.keys(data.main).length +  'محصول و موجودی کل انبار برابر است با: '+ Object.keys(data.main).map(x=>data.main[x].count).reduce((a,b)=>a+b ,0)
+  Object.keys(data.main).filter(n=>data.main[n].count != 0).forEach(x => {
+    trdata.insertAdjacentHTML('beforeend' ,`
+     <tr class=${data.main[x].count < 0 ? "bg-danger" : ""} >
+       <td>${++num}</td>
+       <td>${x}</td>
+       <td>${data.main[x].count ?? data.main[x].count}</td>
+       <td>${ (pp[x].price * 1).toLocaleString('fa')}</td>
+       <td>${(pp[x].price * data.main[x].count).toLocaleString('fa')}</td>
+
+     </tr> 
+    `)
+  });
+
+
+  
+  tolid.innerHTML = ''
+  const tolidi = data?.info ?? anbar.info
+  if(!tolidi){
+   allanbar()
+
+  forceanbar()
+return   alpert("چیزی تولید نشده ")
+  
+  }
+  let num2 = tolidi.length
+  const todaytolid = document.querySelector('#todaytolid')
+  const today = new Date();
+  const emruz = today.toLocaleDateString('fa')
+
+  const todayproduct =( tolidi.filter(x=> new Date(x.id ).toLocaleDateString('fa') == emruz) ).reduce((a,b)=> a + +b.productcount ,0)
+  todaytolid.innerHTML = `مجموع تولید امروز برابر است با ${todayproduct}`
+  tolidi.forEach(x=>{
+    tolid.insertAdjacentHTML('afterbegin',`
+    <tr>
+       <td>${num2--}</td>
+       <td>${x.productname}</td>
+       <td>${x.productcount}</td>
+       <td>${new Date(Number(x.id)).toLocaleString('fa')}</td>
+     </tr
+    `)
+  })
+    allanbar()
+
+  forceanbar()
+
+  } catch (error) {
+    console.log('error :' , error )
+    alpert(error)
+    alpert(`عملیات انجام نشد\nاتصال اینتزنت خود را چک کنید و دوباره امتحان کنید` + error.message)
+    refresh.disabled = false
+  }
+}
+mojodi(JSON.parse(localStorage.getItem('anbar')))
+
+addbtn.addEventListener('click',(e)=>{
+addbtn.innerHTML = 'صبر...'
+e.preventDefault()
+prcount.disabled = true
+fetch(localStorage.url+ `/newproduct/${(prname.value)}/${(prcount.value).trim(' ')}`,{
+  headers : {
+    "Authorization": localStorage.token
+  }
+})
+.then(res=>res.json())
+.then(data=>{
+  if (data == false ){
+    return alpert('دیتا لود نشد')
+  }
+  //  alpert(JSON.stringify(data))
+  alpert(`تعداد ${prcount.value} به ${prname.value} اضافه شد`)
+  mojodi(data)
+  localStorage.setItem('anbar' , JSON.stringify(data))
+  //mojodi(data)
+  // mojodi(JSON.parse(localStorage.getItem('anbar')))
+  prname.disabled = false
+  prname.value = ''
+  prname.focus()
+  addbtn.disabled = true
+  addbtn.innerHTML = 'ثبت'
+  prcount.value = ''
+})
+.catch(err=>{
+  console.log(err)
+  alpert(`عملیات انجام نشد\nاتصال اینتزنت خود را چک کنید و دوباره امتحان کنید` + err.message)
+  refresh.disabled = false
+  refresh1.disabled = false
+  addbtn.disabled = false
+addbtn.innerHTML = 'ثبت'
+
+})
+})
+
+function forceanbar(){
+
+fetch(localStorage.url+'/orderanbar' ,{
+  headers : {
+    "Authorization": localStorage.token
+  }
+})
+.then(res=>res.json())
+.then(d=>{
+  console.log('d forceanbar :' , d )
+  const data = d.data.info ??  d.data
+  let vc = 0;
+   const dt = [...data]
+  let arr = []
+  let obj = {}
+  let resultanbar = []
+  const anbar = JSON.parse(localStorage.getItem('anbar'))
+  console.log('anbar :' , anbar )
+  // const an ={ ...anbar.main} // anbar ba kam shodan anbar force
+  const an =anbar.main // anbar ba kam shodan anbar force
+  dt.forEach(x=>{
+    const dd = x.info.factor ?? x.factor
+    // const dd = x.factor
+    dd.forEach(y=>{arr.push(y)
+      if((y.name).trim() in obj){
+        obj[(y.name).trim()]['count'] += y.count
+      }else{
+        obj[(y.name).trim()] = y
+      }
+    })
+  })
+  console.log('obj :' , obj )
+  console.log('an :' , an )
+  tahlil2.innerHTML = ''
+
+  for (let x in obj){
+    if( !(an[x])) return alpert(x)
+   if( obj[x]['count'] - ( an[x] ? an[x]['count'] : an[x  + ' ']['count']) > 0 ){
+      resultanbar.push({...obj[x.trim()],count:obj[x]['count'] - ( an[x] ? an[x]['count'] : an[x  + ' ']['count'])})
+     an[x] ? an[x]['count'] : an[x  + ' ']['count'] -=  obj[x]['count'] 
+    }
+  }
+  
+  tahlil.innerHTML = ''
+  let num = 0
+  if(resultanbar.length == 0){
+     return  tahlil.innerHTML = '<tr><td></td> <td style="text-align:center ;with:100%"><h6 style="color:red">سفارشی نیست</> </td><td></td> </tr>'
+  
+      }
+  resultanbar.forEach((x) => {
+    tahlil.insertAdjacentHTML('beforeend' ,`
+     <tr>
+       <td>${++num}</td>
+       <td>${x.name}</td>
+       <td>${x.count}</td>
+     </tr> 
+    `)
+  });
+  let allarr = {}
+  arr.forEach(x=>{
+    if(x.name in allarr){
+      // allarr[x.name] = {id: x.id ,count:x.count += allarr[x.name]['count']}
+      console.log('alaki');
+    }else{
+
+      allarr[x.name] = {id: x.id ,count:x.count}
+    }
+  })
+  Object.keys(allarr).forEach((x) => {
+  console.log('x.name :' , x.name ,x )
+    tahlil2.insertAdjacentHTML('beforeend' ,`
+     <tr>
+       <td>${++vc}</td>
+       <td>${x}</td>
+       <td>${allarr[x]['count']}</td>
+     </tr> 
+    `)
+  });
+
+
+
+
+
+})
+.catch(err=>{
+  console.log(err)
+  alpert(`عملیات انجام نشد\nاتصال اینتزنت خود را چک کنید و دوباره امتحان کنید`)
+  refresh.disabled = false
+})
+
+}
+function tahlilhandler(){
+window.scrollTo(0,0)
+}
+
+
+function allanbar(){
+  fetch(localStorage.url+'/ordercount' ,{
+    headers : {
+      "Authorization": localStorage.token
+    }
+  })
+  .then(res=>res.json())
+  .then(d=>{
+    console.log('d allanbar :' , d )
+    const data = d.data.info ??  d.data
+    
+    if(data.length == 0)return alpert("هیچ سفارشی وجود ندارد");
+    let dt = [...data]
+    let arr = []
+    let obj = {}
+    let resultanbar = []
+    let resultall = []
+    const anbar = JSON.parse(localStorage.getItem('anbar'))
+    const an ={ ...anbar.main} // anbar ba kam shodan anbar force
+    console.log('allldata :' , d.data.info ??  d.data)
+    dt.forEach(x=>{
+      const dd = x.info?.factor || x.factor
+      // const dd =  x.factor
+      
+      dd.forEach(y=>{
+        if((y.name).trim() in obj){
+          obj[(y.name).trim()]['count'] += y.count
+        }else{
+          obj[(y.name).trim()] = y
+        }
+      })
+    })
+
+    for (let x in obj){
+    if( !(an[x])) return alpert(x)
+
+      resultall.push({name:x ,count:obj[x]['count']});
+     if( obj[x]['count'] - ( an[x] ? an[x]['count'] : an[x  + ' ']['count']) > 0 ){
+        resultanbar.push({...obj[x.trim()],count:obj[x]['count'] - ( an[x] ? an[x]['count'] : an[x  + ' ']['count'])})
+        an[x] ? an[x]['count'] : an[x  + ' ']['count'] -=  obj[x]['count'] 
+      }
+    }
+    tahl.innerHTML = ''
+    let num = 0
+    resultanbar.forEach((x) => {
+      tahl.insertAdjacentHTML('beforeend' ,`
+       <tr>
+         <td>${++num}</td>
+         <td>${x.name}</td>
+         <td>${x.count}</td>
+       </tr> 
+      `)
+    });
+    if(data.length == 0){
+      //  tahl.innerHTML = '<tr><td></td> <td style="text-align:center ;with:100%"><h6 style="color:red">سفارشی نیست</> </td><td></td> </tr>'
+      //  tah.innerHTML = '<tr><td></td> <td style="text-align:center ;with:100%"><h6 style="color:red">سفارشی نیست</> </td><td></td> </tr>'
+       tahlil.innerHTML = '<tr><td></td> <td style="text-align:center ;with:100%"><h6 style="color:red">سفارشی نیست</> </td><td></td> </tr>'
+        return ;
+      }
+    tah.innerHTML = ''
+    let nu = 0
+    resultall.forEach((x) => {
+      tah.insertAdjacentHTML('beforeend' ,`
+       <tr>
+         <td>${++nu}</td>
+         <td>${x.name}</td>
+         <td>${x.count}</td>
+       </tr> 
+      `)
+    });
+  })
+  .catch(err=>{
+  console.log(err)
+//   alpert(`عملیات انجام نشد\nاتصال اینتزنت خود را چک کنید و دوباره امتحان کنید`)
+          alpert(err.message)
+  refresh.disabled = false
+})
+
+}
+
+
+
+function printDiv(divID) {
+  var divToPrint = document.getElementById(divID);
+  var newWindow = window.open("", "", "width=800,height=600");
+  newWindow.document.write(divToPrint.outerHTML);
+  newWindow.print();
+  newWindow.close();
+}
+
+function anbargardani(){
+  if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+   return setTimeout(()=>{
+       alpert(`نقش شما اجازه این کار را ندارد و فقط مدیر میتواند این کار را انجام بدهد`)
+    },200)
+  }
+  confirmm(`با انجام این کار موجودی کل محصولات صفر میشود
+  تا دوباره از نو موجودی هر محصول
+  وارد شود`, okCallback,cancelCallback)
+}
+function okCallback(){
+ setTimeout(()=>{
+  const anbar = (JSON.parse(localStorage.anbar)).main
+  let idd  = 0
+  const result = {}
+  for(let pr in anbar){
+    result[pr] = {id: ++idd ,count : 0}
+  }
+  console.log('anbar callback :' , anbar )
+  console.log('result :' , result )
+  fetch(localStorage.url+ `/reset`,{
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: localStorage.getItem("token"),
+    },
+    body: JSON.stringify(result),
+})
+.then(res=>res.json())
+.then(data=>alpert(data.message))
+.catch(err=>alpert(err.message))
+ },300)
+}
+function cancelCallback(){
+  setTimeout(()=>{
+  alpert('موجودی قبلی محصولات به قوت خود باقیست')
+ },300)
+
+
+}
+
+
+
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+ if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+  document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+ } 
+</script>
+<script src="./index.js"></script>
+
+</body>
+</html>

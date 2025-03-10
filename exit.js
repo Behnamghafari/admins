@@ -1,0 +1,1 @@
+function OnStart(){app._103(!1)}function OnBack(){history.back()}OnStart();

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+  <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./bootstarp.css" />
+    <link rel="stylesheet" href="./style.css" />
+  <title>ویرایش فاکتور ارسال شده</title>
+
+  </head>
+   <body style="direction: rtl ;overflow:auto !important;padding-bottom:309px" class="text-right rtl">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-md nabvar-light">
+      <button
+        class="navbar-toggler mb-2 bg-light"
+        data-toggle="collapse"
+        data-target="#mynav"
+      >
+        <span class="text-center">
+          <i class="fa fa-navicon"></i>
+        </span>
+      </button>
+      <div class="navbar-collapse collapse" id="mynav">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- sidbar -->
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+              <a
+                href=""
+                class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border"
+                >پنل ادمین</a
+              >
+              <div class="bottom-border pb-3">
+                <img
+                  src="./img/behnam.jpg"
+                  class="rounded-circle ml-3"
+                  style="width: 50px"
+                  alt=""
+                />
+                <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+              </div>
+              <ul class="nav-bar list-unstyled flex-column mt-4" >
+                <li class="nav-item  ">
+                  <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link ">
+                  <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                    <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                    <i class="fas fa-users fa-lg ml-3"></i> کاربران
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+                  </a>
+                </li>
+                   <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link current">
+                  <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+                </ul>
+            </div>
+            <!-- end sidbar -->
+            <!-- topnav -->
+            <div
+              class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <h4 class="text-light">داشبورد</h4>
+                </div>
+                <div class="col-md-5">
+                  <form action="" class="my-4 my-md-0">
+                    <div class="input-group">
+                      <button class="btn btn-white search-button">
+                        <i class="fas fa-search text-danger"></i>
+                      </button>
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form-control search-input"
+                        placeholder="جستجو"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3">
+                  <ul class="navbar-nav flex-row justify-content-between">
+                    <li class="nav-item">
+                      <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                        <i class="fas fa-comments fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./orderbasket.html"
+                        class="nav-link"
+                        id="basketcount"
+                        style="position: relative"
+                      >
+                        <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">
+                        <i class="fas fa-bell fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item mr-md-auto">
+                      <a
+                        href="#logoutModal"
+                        data-toggle="modal"
+                        class="nav-link"
+                      >
+                        <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end topnav -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navigation -->
+
+    <!-- modal -->
+    <div class="modal fade" id="logoutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>آیا میخواهید خارج شوید؟</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted">
+              در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+            <button
+              class="btn btn-danger"
+              onclick="localStorage.removeItem('token');location.assign('./index.html')"
+            >
+              خارج میشوم
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- other code -->
+    <section>
+      <div class="container-fluid">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="row pt-md-5 mt-md-2 mb-5">
+            <p
+              class="col-10 mx-auto alert alert-info text-center"
+              id="username2"
+            ><span class="close" onclick="location.assign('./allsend.html')">&times;</span>
+        </p>
+            <table
+              class="table table-sm table-striped table-hover col-lg-10 col-sm-12 mx-auto text-center"
+            >
+              <thead>
+                <tr class="row alert alert-success">
+                  <th class="col-1">ردیف</th>
+                  <th class="col-4">نام محصول</th>
+                  <th class="col-1">تعداد</th>
+                  <th class="col-2">قیمت</th>
+                  <th class="col-2">جمع کل</th>
+                  <th class="col-2">حذف</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+
+            <div
+              id=""
+              class="col-lg-10 col-sm-12 row mx-auto text-center input-group mt-5 m-0 p-0"
+            >
+              <input
+                class="col-5 form-control"
+                type="text"
+                name=""
+                id="productname"
+                placeholder="جستجوی نام محصول"
+              />
+              <input
+                class="col-2 form-control"
+                type="number"
+                name=""
+                id="productcount"
+                placeholder=" تعداد محصول"
+              />
+              <input
+                class="col-2 form-control"
+                type="number"
+                name=""
+                id="productprice"
+                placeholder=" قیمت محصول"
+              />
+              <input
+                class="col-3 form-control"
+                type="number"
+                name=""
+                id="producttotalprice"
+                placeholder=" قیمت نهایی محصول"
+              />
+            </div>
+            <div
+              id="divadd"
+              class="col-lg-10 col-sm-12 row mx-auto text-center"
+            ></div>
+            <button
+              id="addorder"
+              class="btn btn-info mt-2 col-lg-10 col-sm-12 mx-auto text-center"
+            >
+              افزودن محصول به سفارش
+            </button>
+
+            <button
+              id="endorder"
+              class="btn btn-success col-lg-10 col-sm-12 mx-auto text-center mt-4"
+            >
+              ویرایش نهایی سفارش
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- other code -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="alert.js"></script>
+    <!--<script src="../js/popper.js"></script>-->
+    <!--<script src="../js/bootstartp.js"></script>-->
+    <script>
+      let factorNo ;
+      let userId ;
+      let fullName ;
+      let userid ;
+      const edid = localStorage.editid 
+      const edino = localStorage.edino
+      const url = localStorage.url;
+      const tbody = document.querySelector("#tbody");
+      const endorder = document.querySelector("#endorder");
+      const username2 = document.querySelector("#username2");
+      const addorder = document.querySelector("#addorder");
+      const productcount = document.querySelector("#productcount");
+      const productprice = document.querySelector("#productprice");
+      const producttotalprice = document.querySelector("#producttotalprice");
+      const productname = document.querySelector("#productname");
+      const divadd = document.querySelector("#divadd");
+      //const products = JSON.parse(localStorage.products);
+
+
+      fetch(url + "/unreadordercount" ,{
+        headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const basketcount = document.querySelector("#basketcount");
+          basketcount.insertAdjacentHTML(
+            "beforeend",
+            `
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+  `
+          );
+        });
+
+
+
+
+
+
+      if (!localStorage.token) location.assign("./index.html");
+
+      const adminname = document.querySelector("#adminname");
+      adminname.innerHTML = JSON.parse(localStorage.admininfo)["fullname"];
+      
+     
+
+const prname = []
+      const pr = JSON.parse(localStorage.allproduct);
+      pr.forEach(x=>{
+        if(x?.type?.length>0){
+          x.type.forEach(y=>prname.push({name:`${x.name} ${y.type}` ,price:x.price}))
+        }else{
+          prname.push({name:`${x.name}` ,price:x.price})
+        }
+      })
+      console.log('prname :' , prname )
+      productname.addEventListener("input", (e) => {
+        //divadd.innerHTML = "";
+     //   const products = JSON.parse(localStorage.products);
+      //  const filterdproducts = products.filter((x) =>
+       //   x.name.includes(e.target.value)
+     //   );
+     
+     divadd.innerHTML = "";
+        const products = JSON.parse(localStorage.allproduct);
+        console.log('products :' , products )
+         const filterdproducts = []
+         const regex = new RegExp(e.target.value.split('').join('.*') ,'i')
+        //  for (let pr of products){
+         for (let pr of prname){
+          if(regex.test(pr.name)){
+            filterdproducts.push(pr)
+          }
+         }
+     
+     
+        filterdproducts.forEach((x) => {
+          divadd.insertAdjacentHTML(
+            "beforeend",
+            `
+      <button onclick="productname.setAttribute('disabled',true);productname.value = '${x.name}' ;divadd.innerHTML = '';  productcount.focus()" class="btn col-12 btn-info">${x.name}</button>
+    `
+          );
+        });
+      });
+
+      productcount.addEventListener("change", (e) => {
+        //const products = JSON.parse(localStorage.products);
+      //  const product = products.find((x) => x.name === productname.value);
+     //   productprice.value = product.price;
+    //    producttotalprice.value = product.price * productcount.value;
+  //    });
+   const products = prname;
+        const product = products.find((x) => x.name === productname.value);
+        productprice.value = product.price;
+        producttotalprice.value = product.price * productcount.value;
+      });
+      
+      productcount.addEventListener("keyup", (e) => {
+        if(e.keyCode==13){
+          productprice.focus()
+        }
+      });
+
+      productprice.addEventListener("keyup", (e) => {
+        if(e.keyCode ==13){
+          productname.focus()
+          addorder.click()
+        }
+      });
+
+      productprice.addEventListener("keyup", () => {
+        // productprice.value = +(productprice.value).toLocaleString('fa')
+        producttotalprice.value = +(productprice.value).toLocaleString() * +(productcount.value).toLocaleString();
+      });
+
+      addorder.addEventListener("click", (e) => {
+       if( productcount.value && productname.value && productprice.value ){
+        e.preventDefault();
+        const tdd = document.querySelectorAll(".tdd");
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+      <tr class="row">
+                <td   class="col-1 tdd">${tdd.length + 1}</td>
+                <td    contenteditable="true" class="col-4 productname1">${
+                  productname.value
+                }</td>
+                <td   contenteditable="true" class="col-1 productcount1">${
+           productcount.value
+                }</td>
+                <td    contenteditable="true" class="col-2 productprice1">${
+              productprice.value
+                }</td>
+                <td  contenteditable="true" class="col-2">${
+             producttotalprice.value
+                }</td>
+                <td    contenteditable="true" class="col-2" contenteditable="true">حذف</td>
+              </tr>
+    `
+        );
+        const inp = document.querySelectorAll("input");
+        inp.forEach((x) => (x.value = ""));
+       }
+
+      });
+
+      fetch(url + "/products", {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          // console.log('products',data)
+          localStorage.products = JSON.stringify(data);
+        });
+
+      fetch(`${url}/onesend/${localStorage.edino}`,{
+        headers :  {
+          Authorization: localStorage.getItem("token"),
+
+        }
+      })
+        .then((res) => res.json())
+        .then((d) => {
+          let num = 0;
+          console.log('dddddddaaata' , d)
+          const data = d.data;
+          console.log('d.data: ' ,data)
+          const factor = data.factor;
+          fullName = data["user.fullName"]
+          factorNo = data.factorNo
+          userId = data['user.id']
+          localStorage.uId = userId
+          userid= data['user.user_telId']
+        //  username2.innerHTML += `شماره فاکتور ${factorNo} سفارش ${data["user.fullName"]}`;
+   
+          username2.insertAdjacentHTML('afterbegin' ,`
+          <p class="text-right col-12">نام مشتری : ${data["user.fullName"]} </p>
+          <p class="col-12 text-right">تاریخ سفارش : ${(new Date(Number(factorNo)).toLocaleDateString('fa'))}</p>
+          <p class="col-12 text-right">شماره فاکتور : ${factorNo}</p>
+          <p class="col-12 text-right">شماره تلفن : ${data['user.phoneNumber'] ?? 'ثبت نشده'}</p>
+          <p class="col-12 text-right"> آدرس : ${data['user.address'] ?? 'ثبت نشده'}</p>
+          <br>
+          
+          `)
+                 
+                        
+          console.log("data", data);
+          factor.forEach((x, i) => {
+            tbody.insertAdjacentHTML(
+              "beforeend",
+              `
+    <tr class="row trrr" id='tr_${i}'>
+                <td   class="col-1 tdd">${++num}</td>
+                <td  class="col-4 productname1">${x.name}</td>
+                <td onclick="this.innerHTML ='' " id='count_${i}' onkeyup="tot_${i}.innerHTML = parseInt((price_${i}.innerHTML).split(',').join('')) * count_${i}.innerHTML" contenteditable="true" class="col-1 productcount1">${
+               x.count
+              }</td>
+                <td  onclick="this.innerHTML=''"   id='price_${i}' onkeyup="tot_${i}.innerHTML = price_${i}.innerHTML * count_${i}.innerHTML" contenteditable="true" class="col-2 productprice1">${
+           (1 *    x.price).toLocaleString("en")
+              }</td>
+                <td  id='tot_${i}'  class="col-2">${(x.price * x.count).toLocaleString("en")}</td>
+                <td    class="col-2"  onclick='tr_${i}.remove()')'>حذف</td>
+              </tr>
+    `
+            );
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+       endorder.addEventListener('click' , ()=> {
+       endorder.setAttribute('disabled',true)
+        endorder.innerHTML = 'لطفا صبر کنید'
+        const productname = document.querySelectorAll(".productname1");
+        const productcount = document.querySelectorAll(".productcount1");
+        const productprice = document.querySelectorAll(".productprice1");
+        const send = 
+          {
+            finalorderId : localStorage.infoorder1,//baraye tagheer status sefsresh be true
+            fullName ,//baraye tagheer status sefsresh be true
+            userId :localStorage.uId ,
+            orderfactorNo : factorNo ,
+            factor :[]
+          }
+        productname.forEach((x , i)=>{
+          send.factor.push({
+            name :x.innerHTML , 
+              count : parseInt((productcount[i].innerHTML).split(",").join("")),
+            price : parseInt((productprice[i].innerHTML).split(",").join(""))
+            //count : +productcount[i].innerHTML,
+          //  price : +productprice[i].innerHTML
+          })
+        })
+        fetch(`${url}/editsend/${edino}`,{
+          method : 'put',
+          headers : {
+            'content-Type' : 'application/json',
+          Authorization: localStorage.getItem("token"),
+          },
+          body :JSON.stringify(send)
+        })
+        .then(res=>res.json())
+        .then(d=>{
+            console.log('d' ,d)
+            if(d.data == false){
+                return alpert('شما مجوز این کار را ندارید . برای انجام اینکار نقش شما یا باید سوپر ادمین باشد یا مدیر')
+            }
+          const data = d.data
+          console.log('data',data)
+          alpert('فاکتور صادر شد')
+          localStorage.infoorder1 = 0
+          location.assign('./allsend.html')
+        })
+        .catch(err=>console.log(err))
+      })
+
+
+// document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+// document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+    </script>
+    <script src="./index.js"></script>
+
+  </body>
+</html>

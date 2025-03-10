@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./bootstarp.css">
+ <style>
+    .navbar-toggler {
+      border: none;
+      background-color: transparent;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #333;
+    }
+
+    .nav-link {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body style="direction: rtl" class="text-right">
+
+ 
+<div class="container mt-5">
+  <div class="row justify-content-center">
+      <div class="col-md-6 col-10 shadow  mt-5 rounded border">
+          <h5 class="mb-3">ورود</h5>
+          <form id="loginForm">
+              <div class="form-group">
+                  <label for="urll">آدرس سایت </label>
+                  <input type="text" class="form-control" id="urll" name="urll" >
+              </div>
+              <div class="form-group">
+                  <label for="username">نام کاربری</label>
+                  <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">رمز عبور</label>
+                  <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <button id="btnl"  type="submit" class="btn btn-primary w-100">ورود</button>
+              <!-- <p class="text-monospace mt-5" ondblclick="location.assign('./newadminplus.html')">حساب کاربری ندارید ؟ کلیک کنید</p> -->
+              <p  class="text-monospace mt-2" ondblclick="localStorage.clear();alert('اطلاعات ریست شد') ; location.reload()">ریست اطلاعات</p>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+<script>
+localStorage.url = "https://nodejs-8rin6h.chbk.run"
+
+ if(localStorage.url){
+    document.querySelector('#urll').style.display = 'none'
+    document.querySelector('#urll').previousElementSibling.style.display = 'none'
+  }else{
+    document.querySelector('#urll').addEventListener('change',()=>{
+      localStorage.url =  document.querySelector('#urll').value.trim()
+  
+     })
+  }
+  
+   const ui = document.querySelector('#username')
+  
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+       btnl.setAttribute('disabled',true)
+          btnl.innerHTML = 'لطفا صبر کنید'
+      
+    //  const formData = new FormData(this);
+    //  const requestData = {
+      //    username: formData.get("username"),
+    //      password: formData.get("password")
+   //   };
+   
+     
+      const requestData = {
+          username: document.querySelector("#username").value,
+          password: document.querySelector("#password").value
+      };
+    // let  url = " https://nodejs-8rin6h.chbk.run"
+    const url = localStorage.url
+      fetch(url+"/login", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(requestData)
+      })
+      .then(response => {
+      console.log(url)
+          if (!response.ok) {
+              throw new Error("Invalid credentials");
+          }
+          return response.json();
+      })
+      .then(data => {
+          // Handle successful login, e.g., save token to local storage and redirect
+        if(data.data == "false"){
+        return alert(data.message)
+        }
+  
+          localStorage.setItem('token',data.token)
+          localStorage.admininfo = JSON.stringify(data,['role' , 'id' ,'fullname' ,'username'])
+       
+         //  location.assign('./usertable.html')      
+          
+if(!(localStorage.allproduct)){
+
+   fetch(localStorage.url+'/products',{
+    headers : {
+      "Authorization": localStorage.token
+    }
+  })
+  .then(res=>{
+    if(res.ok){
+      return res.json()
+    }else return false
+  })
+  .then(data=>{
+    alldata = data
+    console.log(data);
+    localStorage.allproduct = JSON.stringify(data)
+      location.assign('./orderbasket.html')   
+  })
+.catch(err=>alert("نت خود را چک کنید "))
+}else{
+
+          location.assign('./orderbasket.html')               
+          }
+            })
+      .catch(error => {
+       
+          // Handle login error
+          // console.error("Login failed", error.message);
+          alert('نام کاربری یا پسورد اشتباه است'+ error.message)
+            btnl.disabled = false
+          btnl.innerHTML = 'ورود'
+      });
+  });
+  
+  
+
+ 
+   </script>
+
+</body>
+</html>

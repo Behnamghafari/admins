@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+  
+  
+   <script src='file:///android_asset/app.js'></script><script>
+
+    function OnStart()
+    {
+   
+    app._103( false );
+    }
+    
+   OnStart()
+    
+    function OnBack(){
+ //   alpert(history.length)
+    if(history.length =1) {
+  //  history.back()
+    
+var bh = confirm("ade you exite")
+    
+   if(bh)app._3(  )
+ }
+ history.back()
+    }
+</script>    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./bootstarp.css" />
+    <link rel="stylesheet" href="./style.css" />
+  <title>لیست مشتری ها</title>
+
+  </head>
+  <body style="direction: rtl" class="text-right rtl">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-md nabvar-light">
+      <button
+        class="navbar-toggler mb-2 bg-light"
+        data-toggle="collapse"
+        data-target="#mynav"
+      >
+        <span class="text-center">
+          <i class="fa fa-navicon"></i>
+        </span>
+      </button>
+      <div class="navbar-collapse collapse" id="mynav">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- sidbar -->
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+              <a
+                href=""
+                class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border"
+                >پنل ادمین</a
+              >
+              <div class="bottom-border pb-3">
+                <img
+                  src="./img/behnam.jpg"
+                  class="rounded-circle ml-3"
+                  style="width: 50px"
+                  alt=""
+                />
+                <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+              </div>
+              <ul class="nav-bar list-unstyled flex-column mt-4" >
+                <li class="nav-item  ">
+                  <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link ">
+                  <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                    <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link current">
+                  <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                    <i class="fas fa-users fa-lg ml-3"></i> کاربران
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+                  </a>
+                </li>
+                     <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+                </ul>
+            </div>
+            <!-- end sidbar -->
+            <!-- topnav -->
+            <div
+              class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <h4 class="text-light">داشبورد</h4>
+                </div>
+                <div class="col-md-5">
+                  <form action="" class="my-4 my-md-0">
+                    <div class="input-group">
+                      <button class="btn btn-white search-button">
+                        <i class="fas fa-search text-danger"></i>
+                      </button>
+                      <input
+                        type="text"
+                        name=""
+                        id="searchuser"
+                        class="form-control search-input"
+                        placeholder="جستجو"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3">
+                  <ul class="navbar-nav flex-row justify-content-between">
+                    <li class="nav-item">
+                      <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                        <i class="fas fa-comments fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./orderbasket.html"
+                        class="nav-link"
+                        id="basketcount"
+                        style="position: relative"
+                      >
+                        <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">
+                        <i class="fas fa-bell fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item mr-md-auto">
+                      <a
+                        href="#logoutModal"
+                        data-toggle="modal"
+                        class="nav-link"
+                      >
+                        <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end topnav -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navigation -->
+
+    <!-- modal -->
+    <div class="modal fade" id="logoutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>آیا میخواهید خارج شوید؟</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted">
+              در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+            <button
+              class="btn btn-danger"
+              onclick="localStorage.removeItem('token');location.assign('./index.html')"
+            >
+              خارج میشوم
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- other code -->
+    <section>
+      <div class="container-fluid">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="row pt-md-5 mt-md-2 mb-5">
+            <div
+              class="alert alert-info col-lg-9 col-sm-10 mx-auto text-center"
+            >
+            <input
+            type="text"
+            name=""
+            id="searchuser1"
+            class="form-control search-input d-md-none"
+            placeholder="جستجو مشتری"
+            inputmode="search"
+          />
+             <h5> لیست مشتری ها</h5>
+             <!-- <h5>کل بدهی مشتریان <span id="bedehiha"></span> کل پرداختی <span id="pardakhtihaa"></span> مانده کل  <span id="mandeh"></span></h5> -->
+            </div>
+
+            <table
+              class="table table-hover table-sm table-striped col-lg-9 col-sm-10 mx-auto text-center"
+            >
+              <thead >
+                <tr class="sticky-top bg-info row">
+                  <th class="col-2">ردیف</th>
+                  <th class="col-10">نام و نام خانوادگی </th>
+
+                </tr>
+              </thead>
+              <tbody id="trdata">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- other code -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="alert.js"></script>
+
+    <!--<script src="../js/popper.js"></script>-->
+    <!--<script src="../js/bootstartp.js"></script>-->
+    <script>
+
+
+
+      const url = localStorage.url;
+      if (!localStorage.token) location.assign("./index.html");
+
+      const adminname = document.querySelector("#adminname");
+      adminname.innerHTML = JSON.parse(localStorage.admininfo)["fullname"];
+
+      fetch(url + "/unreadordercount" ,{
+        headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const basketcount = document.querySelector("#basketcount");
+          basketcount.insertAdjacentHTML(
+            "beforeend",
+            `
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `
+          );
+        })
+          .catch(err=>alpert(" لطفا اینترنت خودا چک کنید "))
+        let allbedehi = 0
+        let pardakhti = 0
+        let allpardakhti = 0
+
+      fetch(`${url}/alluser`, {
+        headers: {
+          "content-Type": "application/json",
+          Authorization: localStorage.token,
+        },
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        if(data.data == 'false'){
+          alpert('etelaata ghalat')
+        }
+        const trdata = document.querySelector('#trdata')
+        trdata.innerHTML = ''
+        let num = 0 ;
+        localStorage.setItem('alluserr',JSON.stringify(data))
+        data.data.forEach(x => {
+          // bedehi = (x.sends).map(x=>x.factor.reduce((a,b)=> a + (b.price * b.count) ,0)).reduce((a,b)=>a+b ,0)
+          // pardakhti = (x.pardakhtis).map(x=> x.mablagh).reduce((a,b)=> a + b ,0)
+          // allbedehi += bedehi
+          // allpardakhti += pardakhti
+          // bedehiha.innerHTML = allbedehi.toLocaleString('fa')
+          // pardakhtihaa.innerHTML = allpardakhti.toLocaleString('fa')
+          // mandeh.innerHTML =( allbedehi - allpardakhti).toLocaleString('fa')
+          trdata.insertAdjacentHTML('beforeend',`
+          <tr class="row" onclick='localStorage.oneuserid = "${x.id}" ;location.href="./infopardakht.html"'>
+                  <td class="col-2">${++num}</td>
+                  <td class="col-10">${x.fullName}</td>
+
+                </tr>
+          `)
+        });
+      })
+      .catch(err=>alpert(" لطفا اینترنت خودا چک کنید "))
+      ;
+      // ${(x.sends.factor).map(x=>x.reduce((a,b)=>a+ (b.count * b.price) ,0).reduce((a,b)=>a+b ,0))}
+    let searchuser1 = document.querySelector('#searchuser1')
+    let searchuser = document.querySelector('#searchuser')
+    let trdata = document.querySelector('#trdata')
+
+    const ser = ((e)=>{
+      trdata.innerHTML = '' ;
+      let num = 0 ;
+      const alluserr = JSON.parse(localStorage.getItem('alluserr')).data ;
+      console.log('alluserr :' , alluserr )
+      const regex = new RegExp(e.target.value.split('').join('.*') ,'i')
+      let filterusers = []
+    alluserr.forEach(x=>{
+      if(regex.test(x.fullName)){
+        filterusers.push({name:x.fullName ,id:x.id})   
+      }
+    })
+    trdata.innerHTML = ' '
+    filterusers.forEach((x) => {
+      trdata.insertAdjacentHTML('beforeend',`
+          <tr class="row" onclick='localStorage.oneuserid = "${x.id}" ;location.href="./infopardakht.html"'>
+                  <td class="col-2">${++num}</td>
+                  <td class="col-10">${x.name}</td>
+
+                </tr>
+          `)
+    });
+  })
+  searchuser1.addEventListener('input',ser)
+  searchuser.addEventListener('input',ser)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+  window.addEventListener('unloadcontent',()=>{
+    document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+  })
+    </script>
+    <script src="./index.js"></script>
+
+  </body>
+</html>

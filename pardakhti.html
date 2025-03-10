@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+  <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./bootstarp.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body style="direction: rtl" class="text-right rtl">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-md nabvar-light">
+      <button
+        class="navbar-toggler mb-2 bg-light"
+        data-toggle="collapse"
+        data-target="#mynav"
+      >
+        <span class="text-center">
+          <i class="fa fa-navicon"></i>
+        </span>
+      </button>
+      <div class="navbar-collapse collapse" id="mynav">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- sidbar -->
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+              <a
+                href=""
+                class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border"
+                >پنل ادمین</a
+              >
+              <div class="bottom-border pb-3">
+                <img
+                  src=""
+                  class="rounded-circle ml-3"
+                  style="width: 50px"
+                  alt=""
+                />
+                <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+              </div>
+              <ul class="nav-bar list-unstyled flex-column mt-4">
+                <li class="nav-item ">
+                  <a href="./dashboard.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./alladmin.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-user-secret fa-lg ml-3"></i> ادمین ها
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./usertable.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-users fa-lg ml-3"></i> کاربران
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allproductnew.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-cubes fa-lg ml-3"></i> محصولات
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./orderbasket.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-cart-plus fa-lg ml-3"></i>سفارشات
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./anbar.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-cart-plus fa-lg ml-3"></i>انبار
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+                  <a href="./allsend.html" class="nav-link text-white p3 mb-2">
+                    <i class="fas fa-shopping-cart fa-lg ml-3"></i> فروش
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link current" >
+                  <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                    <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+                  </a>
+                </li>
+                <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+              </ul>
+            </div>
+            <!-- end sidbar -->
+            <!-- topnav -->
+            <div
+              class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <h4 class="text-light">داشبورد</h4>
+                </div>
+                <div class="col-md-5">
+                  <form action="" class="my-4 my-md-0">
+                    <div class="input-group">
+                      <button class="btn btn-white search-button">
+                        <i class="fas fa-search text-danger"></i>
+                      </button>
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form-control search-input"
+                        placeholder="جستجو"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3">
+                  <ul class="navbar-nav flex-row justify-content-between">
+                    <li class="nav-item">
+                      <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                        <i class="fas fa-comments fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./orderbasket.html"
+                        class="nav-link"
+                        id="basketcount"
+                        style="position: relative"
+                      >
+                        <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">
+                        <i class="fas fa-bell fa-lg text-muted"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item mr-md-auto">
+                      <a
+                        href="#logoutModal"
+                        data-toggle="modal"
+                        class="nav-link"
+                      >
+                        <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end topnav -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navigation -->
+
+    <!-- modal -->
+    <div class="modal fade" id="logoutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>آیا میخواهید خارج شوید؟</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted">
+              در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+            <button
+              class="btn btn-danger"
+              onclick="localStorage.removeItem('token');location.assign('./index.html')"
+            >
+              خارج میشوم
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- other code -->
+    <section>
+      <div class="container-fluid">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="row pt-md-5 mt-md-2 mb-5">
+            <h5
+              class="col-lg-10 col-sm-12 mx-auto alert alert-info text-center"
+              id="username2"
+            >
+            <div class=" row mx-auto">
+              <input id="inputuser" required class="form-control col-12" type="text" placeholder='جستجوی نام مشتری' >
+             <div class="col-12" id="userdiv"></div>
+
+              <br>
+              <input type="text" required  id="mablagh" placeholder="مبلغ پرداختی"  class="form-control col-6">
+            <select name="noepardakht" required id="noepardakht" class="form-control col-6">
+              <option value="واریز">کارت به کارت</option>
+              <option value="نقدی">نقدی</option>
+              <option value="چکی">چکی</option>
+              <option value="دیگر">دیگر</option>
+            </select>
+           
+          </div>
+          <textarea required class="form-control col-12  " placeholder="توضیحات" type="text" name="tozih" id="tozih"></textarea>
+          <br>
+           <button id="pardakhtbtn" class="btn btn-warning w-100"> ثبت مبلغ پرداختی</button>
+              <div id="divuser"></div>
+          </h5>
+          <div class="mx-auto col-12 col-md-10 ">
+            <h5 id="allcount" class="text-center"></h5>
+            <div class="input-group">
+              <label for="offset" id="offl" class="form-control col-3">از ردیف</label>
+              <input onclick="this.value =''" class="form-control col-2" placeholder="" type="number" name="" id="offset" >
+              <label for="limit" id="offl" class="form-control col-3 bg-muted"> چند تا بعد</label>
+              <input onclick="this.value =''" class="form-control col-2" placeholder="" type="number" name="" id="limit">
+              <button class="btn- btn-info col-2" id="reporthandler">گزارش </button>
+            </div>
+          </div>
+          
+          
+          <table
+              class="table table-sm table-striped table-hover col-lg-10 col-sm-12 mx-auto text-center"
+            >
+              <thead class="sticky-top bg-info w-100">
+                <tr class="row bg-info">
+                  <th class="col-1">ردیف</th>
+                  <th class="col-2"> مشتری</th>
+                  <th class="col-1"> تاریح</th>
+                  <th class="col-2">ادمین </th>
+                  <th class="col-2">مبلغ پرداختی</th>
+                  <th class="col-1">نوع پرداخت</th>
+                  <th class="col-3"> توضیحات</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- other code -->
+
+    <script src="alert.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!--<script src="../js/jqury.js"></script>-->
+    <!--<script src="../js/popper.js"></script>-->
+    <!--<script src="../js/bootstartp.js"></script>-->
+    <script>
+      let factorNo ;
+      
+      var userId ;
+      let fullName ;
+      var user_telId ;
+      const url = localStorage.url;
+      const tbody = document.querySelector("#tbody");
+      const endorder = document.querySelector("#endorder");
+      const username2 = document.querySelector("#username2");
+      const addorder = document.querySelector("#addorder");
+      const productcount = document.querySelector("#productcount");
+      const productprice = document.querySelector("#productprice");
+      const producttotalprice = document.querySelector("#producttotalprice");
+      const productname = document.querySelector("#productname");
+      const divadd = document.querySelector("#divadd");
+//      const products = JSON.parse(localStorage.products);
+
+      const divuser = document.querySelector('#divuser')
+      const inputuser = document.querySelector('#inputuser')
+
+      if (!localStorage.token) location.assign("./index.html");
+
+      const adminname = document.querySelector("#adminname");
+      adminname.innerHTML = JSON.parse(localStorage.admininfo)["fullname"];
+
+      fetch(url + "/unreadordercount" ,{
+        headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const basketcount = document.querySelector("#basketcount");
+          basketcount.insertAdjacentHTML(
+            "beforeend",
+            `
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+  `
+          );
+        });
+
+
+      inputuser.addEventListener("input", (e) => {
+        inputuser.addEventListener('click' , ()=>{
+          inputuser.value = ''
+       
+        })
+        userdiv.innerHTML = "";
+        const alluser = JSON.parse(localStorage.alluser);
+        console.log('alluser:  ',alluser)
+        const filterduser = alluser.filter((x) =>
+          x.fullName.toLowerCase().includes(e.target.value)
+        );
+        filterduser.forEach((x) => {
+          userdiv.insertAdjacentHTML(
+            "beforeend",
+            `
+      <button onclick="inputuser.value = '${x.fullName}' ;userdiv.innerHTML = '';  userId= '${x.id}' ;user_telId='${x.user_telId}'" class="btn col-12 btn-info btn2">${x.fullName}</button>
+    `
+          );
+        });
+      const btn2 = document.querySelectorAll('.btn2')
+      window.addEventListener('keyup' ,(e)=>{
+        if(btn2.length >0){
+          if(e.keyCode == 13){
+            btn2[0].click()
+          }
+        }
+      })
+      });
+
+     
+
+
+      // fetch(url + "/alluser", {
+      //   headers: {
+      //     Authorization: localStorage.getItem("token"),
+      //   },
+      // })
+      //   .then((res) => res.json())
+      //   .then((d) => {
+      //     console.log('d: ' ,d)
+      //     localStorage.alluser = JSON.stringify(d.data);
+      //     console.log('alluser', JSON.parse(localStorage.alluser))
+      //   });
+
+  const pardakhtbtn = document.querySelector('#pardakhtbtn')
+  
+  // var kil = localStorage.getItem('kil') 
+const kj = document.querySelector("#mablagh")
+        
+let bn ;
+        kj.addEventListener("keyup",(e)=>{
+        
+        
+          let number = String(kj.value)
+          console.log("number :" , number )
+     //     console.log('localStorage.kil :' , localStorage.kil )
+          if(isNaN( Number(number.split(",").join("")))) {
+            number = ""
+          alpert("فقط عدد انگلیسی وارد کنید")
+         }
+       kj.value = Number(number.split(",").join("")).toLocaleString("en")
+        
+         bn = (kj.value).split(",").join("")
+         
+          //localStorage.setItem("kil", JSON.stringify(bn))
+      })
+  pardakhtbtn.addEventListener('click' ,(e)=>{
+         if((inputuser.value.length>0 && mablagh.value.length>0 && tozih.value.length>0) == false) {
+      return  alpert('یک یا چند ورودی خالی است')
+    } 
+    
+ pardakhtbtn.disabled = true
+ pardakhtbtn.innerHTML = 'لطفا صبر کنید'
+ e.preventDefault()
+
+//  alpert("bn: " + bn)
+    const par = {
+       mablagh : bn,
+       // (document.querySelector('#mablagh').value) ,
+       noepardakht :  document.querySelector('#noepardakht').value ,
+       tozih : document.querySelector('#tozih').value ,
+       userId ,
+       user_telId ,
+    }
+    console.log('par: ' ,par)
+    fetch(`${url}/pardakht` ,{
+      method : 'POST' ,
+      headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+        body : JSON.stringify(par)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      if(data.data == false)return alpert(data.message)
+      console.log('data' ,data.data)
+      pardakhtbtn.disabled = false
+ pardakhtbtn.innerHTML = 'ثبت مبلغ پرداختی'
+      alpert('پرداخت انجام شد')
+      document.querySelectorAll('input').forEach(x=>x.value = '')
+      document.querySelector("textarea").value =""
+      // location.assign('./usertable.html')
+      allpar()
+    })
+    .catch(er=>{
+      pardakhtbtn.disabled = false
+      pardakhtbtn.innerHTML = 'ثبت مبلغ پرداختی'
+      console.log('er : ',er.message)
+    })
+  })
+ const reporthandler = document.querySelector('#reporthandler')
+ reporthandler.addEventListener('click' ,()=>allpar())
+function allpar (){
+  let count ;
+const limit = document.querySelector('#limit').value || 20
+const offset = document.querySelector('#offset').value ? (document.querySelector('#offset').value)-1 : 0
+  tbody.innerHTML = ''
+  fetch(`${url}/allpardakhti/${limit}/${offset}`,{
+    headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+  })
+  .then(res=>res.json())
+  .then(d=>{
+    console.log('d :' , d )
+    let num =  offset 
+    const data = d.data
+    allcount.innerHTML = `کل ردیف پرداختی   برابر است با ${d.count} و کل پرداختی های گزارش برابر است با: ${data.reduce((a,b)=>a + b.mablagh ,0).toLocaleString('fa')}`
+    console.log('data all pardakhti' , data)
+   console.log('data all errorr' , d.message)
+    data?.forEach((x,index)=>{
+      tbody.insertAdjacentHTML('beforeend' , `
+      <tr class="row"  onclick="trhandler('${x.id}' ,'${x.user_telId}')">
+                  <td class="col-1">${++num}</td>
+                  <td class="col-2">${x['user.fullName']}</td>
+                  <td class="col-1">${new Date(+(x.factorNo)).toLocaleDateString('fa')}</td>
+                  <td class="col-2">${x['admin.fullname']}</td>
+                  <td class="col-2 align-middle">${(x?.mablagh)?.toLocaleString('fa')}</td>
+                  <td class="col-1">${x?.noepardakht}</td>
+                  <td class="col-3"> ${x?.tozih}</td>
+                </tr>
+      `)
+    })
+  })
+}
+
+function trhandler(id,user_telId){
+localStorage.onepay = id ;
+localStorage.utlid = user_telId ;
+location.href="./pardakhtiedit.html"
+}
+
+window.addEventListener('load',allpar())
+
+
+
+
+
+
+
+
+
+
+//document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+    </script>
+    <script src="./index.js"></script>
+
+  </body>
+</html>

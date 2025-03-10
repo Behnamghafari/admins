@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstarp.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="alert alert-danger">
+    <table class="table table-hover table-sm table-striped">
+      <thead>
+        <tr>
+          <th>no</th>
+        <th>name</th>
+        </tr>
+      </thead>
+      <tbody id="nabod">
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-success" >
+    <table class="table table-hover table-sm table-striped">
+      <thead>
+        <tr>
+          <th>no</th>
+        <th>name</th>
+        </tr>
+      </thead>
+      <tbody id="product">
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-info" >
+    <table class="table table-hover table-sm table-striped">
+      <thead>
+       <tr>
+        <th>no</th>
+        <th>name</th>
+        <th>count</th>
+       </tr>
+      </thead>
+      <tbody id="anabr">
+      </tbody>
+    </table>
+  </div>
+
+
+  <script>
+    let yy = ['yek' , 'do']
+    
+    fetch('https://kianwood.chbk.run/allreq')
+    .then(res=>res.json())
+    .then(d=>{
+      const anbar = d.anbar.main
+      const an = Object.keys(anbar)
+      const pr = JSON.parse(localStorage.allproduct)  || d.product
+      const allp = {}
+      const products = []
+      let num = 0
+      console.log('pr :' ,  pr)
+      const pricess = []
+      pr.forEach(x=>{
+        x.type.forEach((y,i)=>{
+        //   products.push(x.name + ' ' + y.type)
+        allp[x.name + ' ' + y.type] = {price:pr[i].price ,count:anbar[x.name + ' ' + y.type]['count']}
+        })
+    })
+    for( pt in allp){
+        pricess.push(allp[pt]['count'] * allp[pt]['price']  )
+        // pricess.push(pt)
+    }
+      console.log('pricess :' , pricess.reduce((a,b)=>a+b ,0) )
+ 
+
+
+
+    })
+    .catch(err=>alert(err.message))
+  </script>
+</body>
+</html>

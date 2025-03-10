@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title> درباره ما</title>
+
+</head>
+<script>
+    window.addEventListener('DOMContentLoaded' ,(e)=>{
+        fetch(localStorage.url + '/textbot',{
+            headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log('data :' , data )
+            inp.value = data.botinfo
+        })
+        .catch(err=> {
+            console.log('err bottext:' , err )
+        })
+    })
+</script>
+<body style="direction: rtl" class="text-right rtl" dir="auto">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item  current">
+              <a href="about.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> درباره ما
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-shopping-cart  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+        <pre class="" id="pp"></pre>
+        <div class="col-12 alert alert mx-auto row  ">
+            <form id="fm" action=""  class="col-10 mx-auto row shadow" style="min-height: 70vh;">
+                <b class="col-12 mx-auto mt-2 text-center">متن درباره ما در ربات</b>
+                <textarea id="inp" required class="form-control col-12 mt-2" style="height: 70%;" name="" id=""></textarea>
+                <button id="btn" class="btn btn-primary col-12" style="height: 50px;" type="submit">ثبت</button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      
+      
+      
+           
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+
+  if(!localStorage.token)location.assign('./index.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+  
+  const url = localStorage.getItem('url')
+
+
+
+  
+
+
+  const fm = document.querySelector('#fm');
+  const inp = document.querySelector('#inp')
+  const btn = document.querySelector('#btn')
+  const pp = document.querySelector('#pp')
+  btn.addEventListener('click' ,(e)=>{
+    e.preventDefault()
+    btn.disabled = true
+    fetch(localStorage.url + '/infobot',{
+        headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+    method:'POST' ,
+    body:JSON.stringify( {botinfo : inp.value} )
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log('data :' , data )
+        alpert('yess')
+        pp.innerHTML = data.botinfo
+        btn.removeAttribute('disabled')
+
+    })
+    .catch(err=>{
+        console.log('err :' , err )
+        btn.removeAttribute('disabled')
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
+  ///////////tekrari
+
+fetch(url+'/unreadordercount' ,{
+  headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+})
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>alpert(err.message))
+
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+<script src="./index.js"></script>
+
+</body>
+</html>

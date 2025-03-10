@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+
+
+  <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>نمایش محصول</title>
+
+</head>
+<style>
+  @media screen and (max-width:768px) {
+    .close{
+      right:10px
+    }
+  }
+  @media screen and (min-width:959px) {
+    .close{
+      right:220px
+    }
+  }
+</style>
+
+
+
+
+
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link ">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+               <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link current">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> جزییات محصول
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-comments fa-lg text-muted"  id="commentcount" style="position: relative;"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./login.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid"  >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class=" pt-md-5 mt-md-2 mb-1 ">
+        <div class=" " id="inja">
+
+
+
+          <div id="commentdiv">
+        <h1 class="text-center alert alert-danger">نظرات این محصول</h1>
+        <table class="table table-striped col-lg-10 col-sm-12 table-sm "  >
+          <thead>
+              <tr class="row text-center p-0">
+                  <th class="col-1 p-0">ردیف</th>
+                  <th class="col-6 p-0">نظر</th>
+                  <th class="col-1 p-0"> وضعیت</th>
+                  <th class="col-4 p-0" >عملیات </th>
+              </tr>
+          </thead>
+          <tbody id="commentproduct"></tbody>
+      </table>
+          </div>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <script src="alert.js"></script>
+<script>
+  if(!localStorage.token)location.assign('./login.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+
+
+  const token = localStorage.token
+  const pid = localStorage.pid
+    const  url =  localStorage.url+"/products/"+pid ;
+    const inja = document.querySelector('#inja')
+    const tcomment = document.querySelector('#commentproduct')
+    fetch(url,{
+      headers: {
+          "Content-Type": "application/json",
+          "Authorization": localStorage.getItem('token')
+        },
+    })
+    .then(res=>{
+        if(res.ok){
+            return res.json()
+        }else{
+            alpert('mahsouli nist')
+        }
+    })
+    .then(data=>{
+        console.log('data :' , data )
+        inja.insertAdjacentHTML('afterbegin',`
+        <h1 class="text-center alert alert-danger" >
+          <button class="close" onclick="assignhandler()" style="position: fixed;z-index:100" >&times;</button>
+          
+          ${data?.name}</h1>
+<div class="row">
+    <div class="col-md-12 col-lg-12 alert alert-success ">
+      <h5>  تصویر اصلی محصول</h5>
+
+        <img src="${localStorage.url}/img/${data.photo}" alt="" id="" class="w-100">
+           </div>
+        <div id='inja2' class="col-md-12 col-lg-6  col-xl-6 alert alert-info">
+          <h5>خصوصیات محصول</h5>
+          <strong>  ادمین سازنده </strong>: <strong>${data.admin?.fullname ?? "ثبت نشده "}</strong>
+          <br>
+          <strong>قابل فروش </strong>:<strong> ${data.available== 1  ? 'بله' : 'خیر'}</strong>
+           <br />
+           
+           
+           <strong>تاریخ ساخت </strong>: <strong>${new Date(data.createdAt).toLocaleDateString('fa')}</strong>
+            <br />
+            <strong>قیمت </strong>: <strong>${(data.price *1).toLocaleString("fa")}</strong>
+            <br />
+            <strong>تنوع </strong>: <strong>${data.type[0] ? data.type.map(x=>x.type).join('/') : 'محصول اصلی' }</strong>
+            <br />
+            <strong>لینک دانلود </strong>: <strong>${data.url}</strong>
+
+            <h5>خصوصیات  بیشتر محصول</h5>
+    </div>
+    <div id="rowdetail" class="alert alert-success col-md-12 col-lg-6 col-xl-6" > 
+            <h5>عکسهای  بیشتر محصول</h5>
+            
+ 
+</div>
+</div>
+        
+        `)
+        let key = Object.keys(data.info)
+  let value = Object.values(data.info)
+  console.log('key' , key);
+  key.forEach((x,index)=>{
+    inja2.insertAdjacentHTML('beforeend',`
+      <strong>${x}</strong>:<strong>${value[index]}</strong>
+    <br />
+      
+      `)
+        })
+  data.allphoto.forEach(x=>{
+    if(x.startsWith('http')){
+      rowdetail.insertAdjacentHTML('beforeend',`
+    <img src="${x}" style="width:100px ;height:100px">
+    `)
+    }else{
+      rowdetail.insertAdjacentHTML('beforeend',`
+    <img src="${localStorage.url}/img/${x}" style="width:100px ;height:100px">
+    `)
+    }
+
+   
+  })
+
+
+// comments of  products 
+
+
+  let rco = 0
+    console.log(data.comments);
+      data.comments.forEach((x,index)=>{
+        tcomment.insertAdjacentHTML('beforeend',`
+        <tr class="row text-center statusrow" >
+              <td class="col-1" >${++rco}</td>
+              <td class="col-6" >${x.message}</td>
+              <td class="col-2" id="status_${index}">${x.ok == 1 ? 'تایید' : 'عدم تایید'}</td>
+              <td class="col-3" >
+                <button id="btnok" onclick="okhandler(${x.id},${index})" class="btn btn-info"><span id="okno_${index}" class="badge badge-success">${x.ok == true ? 'تایید' : 'عدم تایید'}</span></button>
+                <button onclick="delcommenthandler(${x.id},${index})" class="btn btn-info"><span class="badge badge-danger">حذف</span></button>
+
+
+                </td>
+
+             
+          </tr>
+    `)
+      })
+
+
+
+
+    })
+.catch(err=>console.log(err));
+    
+    function assignhandler(){
+      location.assign('./allproductnew.html')
+    }
+
+
+    function assignhandler(){
+      location.assign('./allproductnew.html')
+    }
+    function okhandler(x,y){
+      const nd = JSON.stringify({adminId : JSON.parse(localStorage.admininfo).id})
+      
+      const okno = document.querySelector(`#okno_${y}`)
+      const st = document.querySelector(`#status_${y}`)
+      
+      if(st.innerHTML == 'عدم تایید'){
+       fetch(localStorage.url+'/okcomment/'+x,{
+        method:'PUT',
+        headers:{
+          'content-Type' : 'application/json',
+          "Authorization": token
+                  },
+                  body:nd
+      }).then((res)=>{if(res.ok){
+        st.innerHTML = 'تایید'
+        okno.innerHTML = 'عدم تایید'
+        alpert('تایید')
+      }else{
+        console.log('url',url)
+
+      }
+    })
+     }else{
+  
+
+           fetch(localStorage.url+'/notokhandler/'+x,{
+        method:'PUT',
+        headers:{
+        'content-Type' : 'application/json',
+        "Authorization": token
+      },
+      body :nd
+      }).then((res)=>{if(res.ok){
+        st.innerHTML = 'عدم تایید'
+        okno.innerHTML = 'تایید'
+        alpert('عدم تایید')
+      }else{
+        console.log('url',url)
+        alpert('no')
+      }
+    })
+      .catch(err=>console.log(err));
+  }
+    }
+
+
+    
+    function delcommenthandler(x,y){
+      const st = document.querySelectorAll('.statusrow')
+      fetch(localStorage.url+'/deletecomment/'+x,{
+        method:'DELETE',
+        headers:{
+        'content-Type' : 'application/json',
+        "Authorization": token
+      }
+      }).then((res)=>{if(res.ok){
+        st[y].remove()
+      }else{
+        alpert('no')
+      }
+    })
+    .catch(err=>console.log(err));
+    }
+
+    fetch(localStorage.url+'/unreadordercount' ,{
+      headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+    })
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>console.log(err));
+
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>افزودن محصول</title>
+
+</head>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item ">
+              <a href="dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link current">
+              <a href="./newnewproduct.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i>  افزودن محصول 
+              </a>
+            </li>
+               <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./newcategory.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> دسته بندی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-shopping-cart  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+             <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button" >
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+        
+
+
+
+        <div  class="row mr-1 col-12">
+          <img src="#" alt="" id="productPhoto" style="width: 100px;height: 100px;border-radius: 50%;">
+      
+          </div>
+
+          
+          <div class="form-group mx-auto">
+            <div class="input-group row mr-1">
+                   <select class="col-md-3 col-lg-2" required name="photo"  id="photo" class="form-control">
+                <option value="" class="font-weight-bold">انتخاب عکس</option>
+              </select>
+              <input  required  type="text" name="name" id="name" class="col-lg-5 col-md-9 form-control font-weight-bold" placeholder="نام محصول">
+              
+              <select  name="catId" id="catId" class="form-control font-weight-bold"></select>
+            </div>
+            <div class="input-group row mr-1">
+              <input  required  type="number" name="price" id="price" class="form-control font-weight-bold" placeholder="قیمت محصول">
+              <select name="available" id="available">
+                <option value=1 selected class="bg-success font-weight-bold" >قابل فروش</option>
+                <option value=0  class="bg-danger font-weight-bold">غیر قابل فروش</option>
+              </select>
+              
+            </div>
+            <input  type="text" name="type" id="type" class="form-control font-weight-bold mr-1" placeholder="نوع">
+            <hr />
+            <!-- newattr -->
+
+
+            <div id="newattrdiv">
+              <h6 class="text-center">سایر خصوصیات محصول</h6>
+
+            </div>
+            <button id="addattrebiute" class="btn btn-success">افزودن خصوصیات محصول</button>
+           <hr />
+        <div id="picdiv" class="row mr-1 col-12"> </div>
+
+           <select name="" id="morpic" class="form-control" onchange="morimg(this.value)">
+            <option value="">افزودن عکسهای بیشتر</option>
+           </select>
+           <br />
+           <button class="btn btn-primary form-control" id="enterProduct">ثبت محصول جدید</button>
+          </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="alert.js"></script>
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+  if(!localStorage.token)location.assign('./index.html')
+
+  const url = localStorage.url
+  const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+
+
+     // به صورت خودکار محصولات را بعد از بارگیری صفحه نمایش می‌دهیم
+     document.addEventListener("DOMContentLoaded", loadProducts);
+     const catId = document.querySelector('#catId')
+     const photo = document.querySelector('#photo')
+     const productPhoto = document.querySelector('#productPhoto')
+     const addattrebiute = document.querySelector('#addattrebiute')
+     const newattrdiv = document.querySelector('#newattrdiv')
+     const nameattr = document.querySelectorAll('.nameattr')
+     const valueattr = document.querySelectorAll('.valueattr')
+     const morpic = document.querySelector('#morpic')
+     const picdiv = document.querySelector('#picdiv')
+     const enterProduct = document.querySelector('#enterProduct')
+
+    
+
+
+
+     let fetchedpic = null
+
+     let num = 0
+
+catId.addEventListener('change',()=>console.log(catId.value))
+console.log('catid',catId.value)
+
+     let info = {}
+   
+     let allphoto = []
+   
+     enterProduct.addEventListener('dblclick',(e)=>{
+      if(!(document.querySelector('#name').value.length>0 &&document.querySelector('#price').value.length>0 &&photo.value)){
+        enterProduct.innerHTML = 'یک یا چند ورودی خالی است'
+        enterProduct.style.color = 'red'
+        setTimeout(()=>{
+           enterProduct.innerHTML = 'ثبت محصول جدید'
+        enterProduct.style.color = 'white'
+
+        },5000)
+      return  ;
+    }
+      enterProduct.setAttribute('disabled',true)
+enterProduct.innerHTML = 'لطفا منتظر باشید'
+      const color = document.querySelector('#type').value
+      let nm = 0
+       const data = {
+         info ,
+         type : color.split('/').map(x=>{
+          ++nm ;
+     return {type : x ,count : 0 , id : nm}
+     }),
+         allphoto ,
+         catId:catId.value ,
+         photo:photo.value ,
+         name: document.querySelector('#name').value,
+         price: document.querySelector('#price').value,
+         available: document.querySelector('#available').value,
+         adminId : JSON.parse(localStorage.admininfo).id ?? '1'
+       }
+       console.log("type",data.type)
+      console.log(data);
+      fetch(url+'/products',{
+       method:'POST',
+       headers: {
+         "Content-Type": "application/json",
+         "Authorization": localStorage.getItem('token')
+       },
+       body: JSON.stringify(data)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+       console.log(data);
+       alpert('محصول جدید با موفقیت ایجاد شد')
+
+      location.reload()
+      })
+       .catch(err=>{
+         console.log(err.message)
+         enterProduct.disabled = false
+         enterProduct.innerHTML = 'ثبت محصول'
+         alpert('reeeeor' + err.message)
+       })
+     })
+
+     addattrebiute.addEventListener('click',(e)=>{
+       e.preventDefault()
+       newattrdiv.insertAdjacentHTML('beforeend',
+       `
+       <div class="input-group">
+         <input  type="text" class="nameattr form-control font-weight-bold" placeholder="عنوان خصوصیت ${++num} :" >
+         <input  type="text" class="valueattr form-control font-weight-bold" placeholder="مقدار خصوصیت ${num} :">
+       </div>
+       `
+       )
+
+       const  valueattr = document.querySelectorAll('.valueattr')
+       const  nameattr = document.querySelectorAll('.nameattr')
+     valueattr.forEach((x,index)=>{
+       x.addEventListener('change',()=>{
+         info[nameattr[index].value]= x.value
+         console.log(info)
+       })
+     })
+
+     })
+   photo.addEventListener('change',()=>{
+     productPhoto.src = url + '/img/' + photo.value;
+   })
+
+   function morimg (e){
+     allphoto.push(`${e}`)
+        picdiv.insertAdjacentHTML('beforeend',`
+   
+     <div class=" col-sm-6 col-lg-3 imdiv "id="${e}" style="height:200px;width:150px">
+       <div>
+        <img src="${url}/img/${e}" alt="" style="height:150px;width:150px">
+        </div>
+       <div class="btn-group "style="width:150px" >
+         <button class="btn btn-danger" onclick="dlhandler('${e}')">delete</button>
+         <button class="btn btn-primary" onclick="copyhandler2('${e}')">copy</button>
+       </div>
+    </div>
+    
+     `)
+   }
+
+
+     fetch(`${url}/allpic`,{
+      headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+     })
+ .then(res=> res.json())
+ .then(data=>{
+   fetchedpic = [...data]
+   productPhoto.src = url + '/img/' + data[0]
+   
+
+   if(data.length === 0 )return photo.innerHTML = `<h3 class="text-center">هیچ عکسی وجود ندارد</h3>`
+   data.reverse().forEach(img => {
+     photo.insertAdjacentHTML('beforeend',`
+     <option value= '${img}'>${img}</option>
+`
+     )
+
+     morpic.insertAdjacentHTML('beforeend',`
+     <option value= '${img}'>${img}</option>
+`
+     )
+
+   })
+   })
+   .catch(err=> alpert("لطفا نت خودرا چک کنید"))
+
+     
+function loadProducts() {
+ fetch(url + "/categories",{
+     headers: {
+         "Content-Type": "application/json",
+         "Authorization": localStorage.getItem('token')
+       }
+   })
+     .then(response => response.json())
+     .then(data=>{
+       console.log(data)
+       data.forEach(x=>{
+         catId.insertAdjacentHTML('afterbegin',`
+         <option value= ${x.id}>${x.name}</option>
+       
+       `)
+       })
+       
+     })
+    }
+
+function createButton(text, className, onClick) {
+   const button = document.createElement("button");
+   button.textContent = text;
+   button.className = `btn ${className} btn-sm mr-1`;
+   button.addEventListener("click", onClick);
+   return button;
+}
+
+function viewProduct(productId) {
+   // انجام عملیات مشاهده محصول با استفاده از fetch
+   fetch(`/api/products/${productId}`)
+       .then(response => response.json())
+       .then(product => {
+           // نمایش محصول در یک مودال یا صفحه جداگانه
+           console.log("View Product:", product);
+       })
+       .catch(error => console.error("Error viewing product:", error));
+}
+
+function editProduct(productId) {
+   // انجام عملیات ویرایش محصول با استفاده از fetch
+   fetch(`/api/products/${productId}` )
+       .then(response => response.json())
+       .then(product => {
+           // نمایش فرم ویرایش محصول در یک مودال یا صفحه جداگانه
+           console.log("Edit Product:", product);
+       })
+       .catch(error => console.error("Error editing product:", error));
+}
+
+function deleteProduct(productId) {
+   // انجام عملیات حذف محصول با استفاده از fetch
+   fetch(`/api/products/${productId}`, {
+    headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            },
+    method: "DELETE" })
+       .then(() => {
+           // حذف ردیف محصول از جدول
+           const row = document.getElementById(`row-${productId}`);
+           row.remove();
+       })
+       .catch(error => console.error("Error deleting product:", error));
+}
+
+
+function copyhandler2(img){
+ copyhandler(img)
+alpert('آدرس عکس کپی شد')
+
+}
+
+function copyhandler(img){
+ if(window.navigator.clipboard){
+window.navigator.clipboard.writeText(`${url}/img/${img}`)
+}
+}
+
+function dlhandler (img){
+  console.log('img:\n',img)
+ const imdiv = document.getElementById(`${img}`)
+
+   allphoto.forEach((x,index)=>{
+    console.log('x' , x);
+    //  if(x == `${url}/img/${img}`){
+    //    imdiv[x].remove();
+       allphoto.splice(index ,1)
+       imdiv.remove()
+
+    //  }
+   })
+}
+
+fetch(url+'/unreadordercount',{
+  headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+})
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=> console.log('err :' , err ))
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+   </script>
+   <script src="./index.js"></script>
+
+</body>
+</html>

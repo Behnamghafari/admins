@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>ارسال پیام</title>
+
+</head>
+  <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script> 
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link ">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+               <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link" id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./login.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+
+
+
+
+        <!-- start send message -->
+        <div class="col-12 col-xl-8 mx-auto">
+          <form class="" id="form1" action="" >
+            <!-- <label for="username">جستجوی نام کاربری</label> -->
+            <input required placeholder="جستجوی نام مشتری" class="form-control form-control-sm"  type="search" name="username" id="username">
+            <div id="searchinput"></div>
+            <!-- <label for="payam">نوشتن پیام برای مشتری</label> -->
+            <textarea required placeholder="نوشتن پیام به مشتری" type="text" class="form-control form-control-sm" name="payam" id="payam"></textarea>
+            <button id="messagebtn" class="btn btn-info w-100">ارسال پیام به یک کاربر</button>
+          </form>
+          <form id="allform1" action="">
+            <textarea  placeholder="نوشتن پیام به همه مشتریان" type="text" required class="form-control form-control-sm" name="allpayam" id="allpayam"></textarea>
+            
+            <button id="allmessagebtn" class="btn btn-danger w-100">ارسال پیام به همه کاربران</button>
+          </form>
+        </div>
+        <!-- end send message -->
+          
+
+
+        <!-- آغاز لیست پیام های خوانده نشده -->
+        <div class="col-12 col-xl-8 mx-auto mt-4 p-0 m-0">
+          <h5 class="text-center text-muted">لیست پیامهای خوانده نشده</h5>
+          <table class="table table-sm table-hover table-striped p-0 m-0 text-center">
+            <thead class="sticky-top">
+              <tr>
+                <th >ردیف</th>
+                <th >مشتری</th>
+                <th >پیام مشتری</th>
+                <th >پاسخ </th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <!-- پایان لیست پیام های خوانده نشده  -->
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+
+<!--<script src="../js/jqury.js"></script>-->
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>-->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+<script>
+  const url = localStorage.url
+  if(!localStorage.token)location.assign('./login.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+
+  fetch(url+'/unreadordercount' ,{
+    headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+  })
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>console.log(err))
+
+// document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+// document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+
+   fetch(url + "/alluseridname" ,{
+    headers : {
+            "content-Type" : 'application/json',
+            "Authorization": localStorage.getItem('token')
+        }
+    })
+.then(res=>res.json())
+.then(data=>{
+    console.log('data.data :' , data.data )
+    localStorage.usersl = JSON.stringify(data.data)
+})
+.catch(err=>console.log(err))
+
+const users = JSON.parse(localStorage.usersl)
+const username  = document.querySelector('#username')
+const searchinput  = document.querySelector('#searchinput')
+const messagebtn = document.querySelector('#messagebtn')
+const payam = document.querySelector('#payam')
+const form1 = document.querySelector('#form1')
+const tbody = document.querySelector('#tbody')
+username.addEventListener('input',(e)=>{
+  searchinput.innerHTML = ''
+  users.forEach(x=>{
+    if(x['fullName'].includes(username.value)){
+      searchinput.insertAdjacentHTML('beforeend',`
+      <p class="bg-info m-0" onclick="username.value = '${x.fullName}' ;searchinput.innerHTML = '' ; payam.focus();localStorage.utid = '${x.user_telId}'"> ${x.fullName}</p>
+      `)
+    }
+  })
+})
+
+
+messagebtn.addEventListener('click',(e)=>{
+  // e.preventDefault()
+  alpert('jfkknf')
+messagebtn.disabled = true;
+messagebtn.innerHTML = " لطفا صبر کنید "
+  if(username.value.length == 0  ){
+    messagebtn.disabled = false;
+messagebtn.innerHTML = " ارسال پیام "
+    return alpert('هیچ ورودی یی نباید خالی باشد')
+  }
+  if(payam.value.length == 0 )return alpert('هیچ ورودی یی نباید خالی باشد')
+  // e.preventDefault()
+  fetch(url+'/sendmessage/'+ localStorage.utid ,{
+    method : 'POST' ,
+    headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    } ,
+    body : JSON.stringify({replymessage:payam.value})
+  })
+.then(res=>res.json())
+.then(data=>{
+  console.log('data :' , data )
+// alpert('jfkknf')
+
+  messagebtn.disabled = false;
+messagebtn.innerHTML = " ارسال پیام "
+  form1.reset()
+})
+.catch(err=>console.log(err))
+})
+
+fetch(url+'/unreadmessage',{
+  headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+})
+.then(res=>res.json())
+.then(d=>{
+  tbody.innerHTML = ''
+  let num = 0
+  console.log('data :' , d.data )
+  const data = d.data
+  data.forEach((x,index)=>{
+    tbody.insertAdjacentHTML('beforeend' ,`
+    <tr>
+          <td  class="m-0 p-0">${++num}</td>
+          <td  class="m-0 p-0">${x['user.fullName']}</td>
+          <td  class="m-0 p-0">${x.message}</td>
+          <td  class="m-0 p-0">
+                    
+<div class="btn-grou  m-0 p-0">
+  <button id="repbtn"  onclick='replyhandler("${x.user_telId}","${x.id}")' class="btn btn-success m-0">جواب</button>
+  <button id="radbtn"  onclick="puthandler('${x.id}')" class="btn btn-danger  m-0"> رد</button>
+</div>
+
+            </td>
+        </tr>
+    `)
+  })
+})
+.catch(err=>console.log(err))
+
+function puthandler (id){
+radbtn.disabled = true;
+radbtn.innerHTML = " لطفا صبر کنید "
+  fetch(url+'/putmessage/'+id ,{
+    method : 'PUT' ,
+    headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    }
+    })
+.then(res=>res.json())
+.then(data=>{
+  console.log('updatedata :' , data )
+ radbtn.disabled = false;
+radbtn.innerHTML = " رد"
+  location.reload()
+})
+.catch(err=>console.log('err :' , err ))
+  }
+
+function replyhandler (user_telId,messageId){
+repbtn.disabled = true;
+repbtn.innerHTML = " لطفا صبر کنید "
+promptt('لطفا پاسخ پیام مشتری را اینجا بنویسید' ,(x)=>{
+  fetch(url+'/sendreplymessage/' + user_telId + "/" + messageId,{
+    method : 'PUT' ,
+    headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+    body : JSON.stringify({replymessage:x})
+  })
+  // .then(res=>res.json())
+  .then(data=>{
+    console.log('data :' , data )
+    alpert('پاسخ پیام مشتری داده شد')
+    messagebtn.disabled = false;
+messagebtn.innerHTML = "جواب "
+    location.reload()
+  })
+  .catch(err=>console.log('err :' , err ))
+})
+  // const message = prompt('لطفا پاسخ پیام مشتری را اینجا بنویسید')
+  // if(message.length <1)return alpert('متن پیام نباید خالی باشد')
+  // console.log('message :' , message )
+//   fetch(url+'/sendreplymessage/' + user_telId + "/" + messageId,{
+//     method : 'PUT' ,
+//     headers : {
+//       "content-Type" : 'application/json',
+//       "Authorization": localStorage.getItem('token')
+//     },
+//     body : JSON.stringify({replymessage:message})
+//   })
+//   // .then(res=>res.json())
+//   .then(data=>{
+//     console.log('data :' , data )
+//     alpert('پاسخ پیام مشتری داده شد')
+//     messagebtn.disabled = false;
+// messagebtn.innerHTML = "جواب "
+//     location.reload()
+//   })
+//   .catch(err=>console.log('err :' , err ))
+}
+
+allmessagebtn.addEventListener('click',(e)=>{
+  e.preventDefault()
+  allmessagebtn.disabled = true;
+  const payam = document.querySelector('#allpayam')
+  if(! payam.value){
+    setTimeout(()=>{
+      allmessagebtn.disabled = false;
+      return alpert('متن پیام الزامی است')
+    },200)
+  }
+  fetch(url+'/allusermessage',{
+    method : 'POST' ,
+    headers : {
+      "content-Type" : 'application/json',
+      "Authorization": localStorage.getItem('token')
+    },
+    body: JSON.stringify({sms:payam.value})
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    console.log('data :' , data )
+    alpert('پیام به همه مشتریان ارسال شد')
+    allmessagebtn.disabled = false;
+messagebtn.innerHTML = "جواب "
+    //location.reload()
+    allform1.reset()
+  })
+  .catch(err=>{
+    console.log('err :' , err )
+    allmessagebtn.disabled = false;
+
+})
+
+})
+
+
+
+</script>
+<script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./bootstarp.css">
+ <style>
+    .navbar-toggler {
+      border: none;
+      background-color: transparent;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #333;
+    }
+
+    .nav-link {
+      color: #333;
+    }
+  </style>
+  <title>ورود</title>
+
+</head>
+<script>
+ 
+</script>
+<body style="direction: rtl" class="text-right">
+
+ 
+<div class="container mt-5">
+  <div class="row justify-content-center">
+      <div class="col-md-6 col-10 shadow  mt-5 rounded border">
+          <h5 class="mb-3">ورود</h5>
+          <form id="loginForm">
+              <div class="form-group">
+                  <label for="urll">آدرس سایت </label>
+                  <input type="text" class="form-control" id="urll" name="urll" >
+              </div>
+              <div class="form-group">
+                  <label for="username">نام کاربری</label>
+                  <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">رمز عبور</label>
+                  <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <button id="btnl"  type="submit" class="btn btn-primary w-100">ورود</button>
+              <!-- <p class="text-monospace mt-5" ondblclick="location.assign('./newadmin.html')">حساب کاربری ندارید ؟ کلیک کنید</p> -->
+              <p  class="text-monospace mt-2" onclick="location.reload()">رفرش صفحه</p>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+<script src="alert.js"></script>
+<script>
+     localStorage.url = "https://nodejs-8rin6h.chbk.app"
+//localStorage.url = "https://kianwood.chbk.run"
+// localStorage.url = "https://nodejs-8rin6h.chbk.run"
+//localStorage.url = "https://bimehshams.chbk.run"
+
+ if(localStorage.url){
+    document.querySelector('#urll').style.display = 'none'
+    document.querySelector('#urll').previousElementSibling.style.display = 'none'
+  }else{
+    document.querySelector('#urll').addEventListener('change',()=>{
+      localStorage.url =  document.querySelector('#urll').value.trim()
+  
+     })
+  }
+
+
+window.addEventListener('load',(e)=>{
+  setTimeout(()=>{
+    username.focus()
+  },200)
+})
+
+
+   const ui = document.querySelector('#username')
+  
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+       btnl.setAttribute('disabled',true)
+          btnl.innerHTML = 'لطفا صبر کنید'
+      
+      const requestData = {
+          username: document.querySelector("#username").value,
+          password: document.querySelector("#password").value
+      };
+
+    const url = localStorage.url
+      fetch(url+"/login", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(requestData)
+      })
+      .then(response => {
+      console.log(url)
+          if (!response.ok) {
+              throw new Error("Invalid credentials");
+          }
+          return response.json();
+      })
+      .then(data => {
+          // Handle successful login, e.g., save token to local storage and redirect
+        if(data.data == "false"){
+        return alpert(data.message)
+        }
+        if(data.role === 'anbar'){
+          document.querySelector('#btnl').removeAttribute('disabled')
+          loginForm.reset();
+          btnl.innerHTML = 'ورود'
+         return alpert('نقش شما اجازه ورود به این برنامه را ندارد شما فقط میتوانید وارد برنامه انبار بشوید')
+        }
+  
+          localStorage.setItem('token',data.token)
+          localStorage.admininfo = JSON.stringify(data,['role' , 'id' ,'fullname' ,'username'])
+       
+          location.assign('./orderbasket.html')      
+          
+            })
+      .catch(error => {
+       
+          // Handle login error
+          // console.error("Login failed", error.message);
+          alpert('نام کاربری یا پسورد اشتباه است'+ error.message)
+            btnl.disabled = false
+          btnl.innerHTML = 'ورود'
+      });
+  });
+  
+  
+
+ 
+   </script>
+
+</body>
+</html>

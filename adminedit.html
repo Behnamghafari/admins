@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+ <script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>ویرایش ادمین</title>
+</head>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+                 <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+             <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link" id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+           
+  <div class="container mt-5 text-right  col-sm-8 col-lg-6" dir="rtl">
+    <h2> فرم ثبت نام ادمین </h2>
+    <form id="registerForm">
+        <div class="mb-3">
+            <label for="fullname" class="form-label">نام ادمین</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" required>
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">نام کاربری ادمین</label>
+            <input type="text"  class="form-control" id="username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">رمز عبور</label>
+            <input type="password" class="form-control" id="password" name="password" >
+        </div>
+        <label for="confirmpassword" class="form-label">تایید رمز عبور</label>
+        <input type="confirmpassword" class="form-control" id="confirmpassword" name="confirmpassword" >
+    
+        <div class="mb-3">
+            <label for="role" class="form-label">نقش کاربر</label>
+            <select class="form-select form-control" id="role" name="role">
+                <option value="admin">ادمین</option>
+                <option value="super-admin">سوپر ادمین</option>
+                <option value="manager">مدیر</option>
+                <option value="anbar">اباردار</option>       
+                 <option value="user">کاربر</option> 
+                          </select>
+        </div>
+        <button id="updatebtn" type="submit" class="btn btn-primary form-control">ویرایش ادمین</button>
+    </form>
+</div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+<script src="./index.js"></script>
+<script src="alert.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!--<script src="../js/jqury.js"></script>-->
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+  if(!localStorage.token)location.assign('./index.html')
+const adminname = document.querySelector('#adminname')
+const updatebtn = document.querySelector('#updatebtn')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+
+const url = localStorage.getItem('url')
+//const id = localStorage.adminId
+const id =  JSON.parse(localStorage.admininfo)['id']  ?? localStorage.adminId ;
+fetch(`${url}/oneadmin/${id}`,{
+  headers : {
+            'content-Type' : 'application/json',
+          'Authorization': localStorage.getItem("token"),
+          },
+})
+    .then(res=>{
+      if(!res.ok){
+        alpert('ایرادی بوجود آمده بعدا دوباره امتحان کنید')
+      }else{
+        return res.json()
+      }
+    })
+    .then(data=>{
+    //alpert(data.role)
+      console.log(data);
+      const fullname = document.querySelector('#fullname')
+    const admin = JSON.parse(localStorage.admininfo)
+    console.log('admin id' , admin.role)
+    if(admin.role !== 'manager'){
+      fullname.setAttribute('disabled' ,'true')
+      username.setAttribute('disabled' ,'true')
+      role.setAttribute('disabled' ,'true')
+    }
+    fullname.value = data.fullname
+      username.value = data.username
+      role.value = data.role
+    
+    })
+    .catch(err=>console.log(err))  
+    // updatebtn.addEventListener('click',(e)=>{
+  //   e.preventDefault()
+  //   const data = {}
+    document
+        .getElementById("registerForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          if (
+            document.querySelector("#password").value !=
+            document.querySelector("#confirmpassword").value
+          ) {
+            return alpert("پسوردها یکی نیست");
+          }
+          let requestData ;
+          if( document.querySelector("#password").value !=  " " ){
+          requestData = {
+            username: document.querySelector("#username").value,
+            fullname: document.querySelector("#fullname").value,
+            password: document.querySelector("#password").value,
+            role: document.querySelector("#role").value,
+          };          }else{
+          requestData = {
+            username: document.querySelector("#username").value,
+            fullname: document.querySelector("#fullname").value,
+            role: document.querySelector("#role").value,
+          };              }
+    fetch(`${url}/adminput/${id}`,{
+      method : 'PUT',
+      headers: {
+          "Content-Type": "application/json",
+          "Authorization": localStorage.getItem('token')
+        },
+        body: JSON.stringify(requestData)
+    })
+    .then(res=>{
+      if(!res.ok){
+        alpert('یک ایراد وجو دارد')
+        return console.log('iradddd');
+      }
+      return res.json()
+    })
+    .then(data=>{
+      console.log(data);
+      if(data.data === false){
+       
+       alpert('شما مجوز این کار را ندارید')
+       return console.log('شما مجوز این کار را ندارید');
+      }
+
+      location.assign('./alladmin.html')
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  })
+  
+  fetch(url+'/unreadordercount',{
+    headers : {
+            'content-Type' : 'application/json',
+          'Authorization': localStorage.getItem("token"),
+          },
+  })
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>console.log(err))
+//document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+//document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+
+
+</body>
+</html>

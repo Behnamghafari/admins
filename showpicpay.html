@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<script src='file:///android_asset/app.js'></script>
+   <script src='./exit.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>عکس پرداختی ثبت نشده</title>
+
+</head>
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light" data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+ 
+  
+  
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  current">
+              <a href="" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+               <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-shopping-cart  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./pardakhti.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-money-bill   fa-lg ml-3"></i> پرداختی
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allmessage.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link"  id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./index.html')">خارج میشوم</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+   <button class="btn btn-info  col-lg-10 text-center text-monospace mx-auto" onclick="location.assign('./allpayshow.html')" > دیدن عکسهای ثبت شده</button>
+
+<p class="col-12 alert sticky-top alert-info  col-lg-10 shadow text-monospace text-center mx-auto">
+  عکس رسیدهاییکه ثبت نشده اند
+</p>
+      
+      <div id="allpic" class="alert col-12 col-lg-10 alert-info mx-auto row "></div>
+      
+      
+      
+           
+      </div>
+    </div>
+  </div>
+  
+  <div style="position: absolute;top: 0px;left: 0px;width: 100vw;height: 100vh ;display:none;z-index:632000" id="ddv">
+  <span class="close btn btn-danger mr-5 " onclick="ddv.style.display='none'">&times;</span>
+  <img style="width: 100%;height: 95%" src="" alt="" id="ax">
+</div>
+  
+  
+  
+  
+</section>
+<!-- other code -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+  if(!localStorage.token)location.assign('./index.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage.admininfo)['fullname']
+  
+  const url = localStorage.getItem('url')
+  
+  
+function allpichandler(){
+  const allpic = document.querySelector('#allpic')
+  fetch(`${localStorage.url}/showpicpay` ,{
+    headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+  })
+  .then(res=> res.json())
+  .then(data=>{
+    console.log(data);
+    allpic.innerHTML =""
+    if(data.length === 0 )return allpic.innerHTML = `<h5 class="text-center mx-auto">هیچ عکس رسید ثبت نشده ای وجود ندارد</h5>`
+    data.forEach(img => {
+      allpic.insertAdjacentHTML('afterbegin',`
+      <div class="col-6 col-md-4 col-lg-3 " style="height:200px;width:200px">
+        <div class="mt-2 text-center text-monospace" >${img.user.fullName}</div>
+        <div>
+          <img  onclick="dol('${img.url}')"  id="dor"   src="${url}${img.url}" alt="" style="height:120px;width:150px"></div>
+        <div class="btn-group "style="width:150px" >
+          <button class="btn btn-danger" ondblclick="dlhandler('${img.id}');this.disabled='true';this.innerHTML='صبرکنید'">حذف</button>
+          <button class="btn btn-primary" ondblclick="sabtput('${img.id}');this.disabled='true';this.innerHTML='صبرکنید'">ثبت شد</button>
+        </div>
+     </div>
+      `)
+    });
+
+  })
+  .catch(err=>console.log('err :' , err ))
+}
+
+allpichandler()
+// window.addEventListener('load',allpichandler())
+function dlhandler (id){
+  fetch(`${url}/dlshowpay/${id}`,{
+    headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            },
+    method : 'DELETE'
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    console.log('data :' , data )
+    if(data.data == 'ok'){
+      alpert('عکس رسید مورد نظر با موفقیت حذف شد')
+      allpichandler()
+    }
+  })
+  .catch(err=>console.log('err :' , err ))
+}
+
+
+function copyhandler2(img){
+  copyhandler(img)
+alpert('آدرس عکس کپی شد')
+
+}
+function sabtput(id){
+  fetch(`${url}/putshowpay/${id}`,{
+    headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            },
+    method : 'PUT'
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    if(data.data == 'ok'){
+      alpert('تغییر انجام شد')
+      allpichandler()
+    }
+
+  })
+  .catch(err=>console.log('err :' , err ))
+
+}
+
+fetch(url+'/unreadordercount' ,{
+  headers : {
+              "content-Type" : 'application/json',
+              "Authorization": localStorage.getItem('token')
+            }
+})
+.then(res=>res.json())
+.then(data=>{
+  const basketcount = document.querySelector('#basketcount')
+  basketcount.insertAdjacentHTML('beforeend',`
+  <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+  `)
+
+})
+.catch(err=>console.log(err));
+
+
+
+
+// اضافه کردن Event Listener به تصویر
+const pic = document.getElementById('ax')
+const ddv = document.querySelector("#ddv")
+function dol (x) {
+
+
+ddv.style.display= "block"
+pic.src = url+x
+  // ایجاد یک لینک موقت برای دانلود
+  //var link = document.createElement('a');
+//  link.href = this.src; // مسیر تصویر
+//  link.download = 'downloaded-image.jpg'; // نام فایل دانلودی
+ // document.body.appendChild(link);
+//  link.click(); // شبیه‌سازی کلیک بر روی لینک
+//  document.body.removeChild(link); // حذف لینک موقت از DOM
+}
+
+
+
+
+
+
+
+
+
+document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+</script>
+<script src="./index.js"></script>
+
+</body>
+</html>

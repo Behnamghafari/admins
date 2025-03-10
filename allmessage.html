@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./bootstarp.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<title>همه پیام ها</title>
+  <script src='file:///android_asset/app.js'></script>
+  
+<body style="direction: rtl" class="text-right rtl">
+ <!-- navigation -->
+<nav class="navbar navbar-expand-md nabvar-light">
+  <button class="navbar-toggler mb-2 bg-light " data-toggle="collapse" data-target="#mynav">
+    <span class="text-center">
+      <i class="fa fa-navicon"></i>
+    </span>
+  </button>
+    <div class="navbar-collapse collapse" id="mynav">
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- sidbar -->
+        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+          <a href="" class="navbar-brand text-white d-block text-center mx-auto py-3 mb-4 bottom-border">پنل ادمین</a>
+          <div class="bottom-border pb-3 ">
+            <img src="./img/behnam.jpg" class="rounded-circle ml-3" style="width: 50px;" alt="">
+            <a href="" id="adminname" class="text-white">بهنام غفاری</a>
+          </div>
+          <ul class="nav-bar list-unstyled flex-column mt-4" >
+            <li class="nav-item  ">
+              <a href="./dashboard.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-home fa-lg ml-3"></i> داشبورد
+              </a>
+            </li>
+            <li class="nav-item sidebar-link ">
+              <a href="./alladmin.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-user-secret  fa-lg ml-3"></i> ادمین ها
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./usertable.html" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-users fa-lg ml-3"></i> کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allproductnew.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> محصولات
+              </a>
+            </li>
+               <li class="nav-item sidebar-link">
+              <a href="./anbar.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cubes fa-lg ml-3 "></i> انبار
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./orderbasket.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-plus   fa-lg ml-3"></i>سفارشات
+              </a>
+            </li>
+            <li class="nav-item sidebar-link">
+              <a href="./allsend.html" class="nav-link text-white p3 mb-2  ">
+                <i class="fas fa-cart-arrow-down  fa-lg ml-3"></i> فروش
+              </a>
+            </li>
+            <li class="nav-item sidebar-link current">
+              <a href="" class="nav-link text-white p3 mb-2 ">
+                <i class="fas fa-commenting  fa-lg ml-3"></i> نظرات
+              </a>
+            </li>
+            </ul>
+        </div>
+        <!-- end sidbar -->
+        <!-- topnav -->
+        <div class="col-xl-10 col-lg-9 col-md-8 bg-dark mr-auto fixed-top py-2 top-navbar">
+          <div class="row ">
+            <div class="col-md-4">
+              <h4 class="text-light ">داشبورد</h4>
+            </div>
+            <div class="col-md-5">
+              <form action="" class="my-4 my-md-0">
+                <div class="input-group">
+                  <button class="btn btn-white search-button">
+                    <i class="fas fa-search text-danger"></i>
+                  </button>
+                  <input type="text" name="" id="" class="form-control search-input" placeholder="جستجو">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <ul class="navbar-nav flex-row justify-content-between">
+                <li class="nav-item">
+                  <a href="" class="nav-link" id="commentcount" style="position: relative;">
+                    <i class="fas fa-comments fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./orderbasket.html" class="nav-link" id="basketcount" style="position: relative;">
+                    <i class="fas fa-shopping-basket fa-lg text-muted"></i>
+               </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">
+                    <i class="fas fa-bell fa-lg text-muted"></i>
+                  </a>
+                </li>
+                <li class="nav-item mr-md-auto">
+                  <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                    <i class="fas fa-sign-out-alt  fa-lg text-danger"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end topnav -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end navigation -->
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade " id="logoutModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>آیا میخواهید خارج شوید؟</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+        <button class="btn btn-danger" onclick="localStorage.removeItem('token');location.assign('./login.html')">خارج میشوم</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal -->
+
+
+
+<!-- other code -->
+<section>
+  <div class="container-fluid" >
+    <div class="col-xl-10 col-lg-9 col-md-8  mr-auto">
+      <div class="row pt-md-5 mt-md-2 mb-5 ">
+
+
+
+
+        <!-- start allmessages table  -->
+        <div class="col-12 col-lg-12 mx-auto">
+          <div class="alert alert-info text-center">
+
+            <div class="mx-auto col-12 col-md-10 ">
+              <button class="btn btn-warning w-100" onclick="location.assign('message.html')">ارسال پیام جدید</button>
+              <p id="allcount" class="text-center"></p>
+              <div class="input-group">
+                <label for="offset" id="offl" class="form-control col-3">از ردیف</label>
+                <input onclick="this.value =''" class="form-control col-2" placeholder="" type="number" name="" id="offset" >
+                <label for="limit" id="offl" class="form-control col-3 bg-muted"> چند تا بعد</label>
+                <input onclick="this.value =''" class="form-control col-2" placeholder="" type="number" name="" id="limit">
+                <button class="btn- btn-info col-2" id="reporthandler">گزارش </button>
+              </div>
+            </div>
+          </div>
+          <table class="table table-sm table-hover table-striped">
+            <thead class="sticky-top bg-info">
+              <tr>
+                <th class="col-1">ردیف</th>
+                <th class="col-2">مشتری</th>
+                <th class="col-1">تاریخ</th>
+                <th class="col-3">سوال</th>
+                <th class="col-2">ادمین</th>
+                <th class="col-3">جواب</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+
+        </div>
+
+
+
+        <!-- end allmessages table  -->
+    
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other code -->
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="alert.js"></script>
+<!--<script src="../js/jqury.js"></script>-->
+<!--<script src="../js/popper.js"></script>-->
+<!--<script src="../js/bootstartp.js"></script>-->
+<script>
+
+  const url = localStorage?.url
+  if(!localStorage.token)location.assign('./login.html')
+
+   const adminname = document.querySelector('#adminname')
+  adminname.innerHTML = JSON.parse(localStorage?.admininfo)['fullname']
+
+//   fetch(url+'/unreadordercount' ,{
+//     headers : {
+//       "content-Type" : 'application/json',
+//       "Authorization": localStorage.getItem('token')
+//     }
+//   })
+// .then(res=>res.json())
+// .then(data=>{
+//   const basketcount = document.querySelector('#basketcount')
+//   basketcount.insertAdjacentHTML('beforeend',`
+//   <span class="badge  badge-pill" style="position: absolute;top: 2px;right: 2px;">${data.data}</span>
+
+//   `)
+
+// })
+
+// document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+// document.querySelector('h4').innerHTML= document.querySelector('.current').innerHTML
+   if(JSON.parse(localStorage.admininfo).role !== 'manager'){
+    document.querySelector('.fa-user-secret').parentNode.style.display = 'none'
+   } 
+
+ function messagehandler (){
+  reporthandler.disabled = true
+  reporthandler.innerHTML = 'صبر'
+  const tbody = document.querySelector('#tbody')
+  tbody.innerHTML = ''
+  let count ;
+const limit = document.querySelector('#limit').value || 10
+const offset = document.querySelector('#offset').value ? (document.querySelector('#offset').value)-1 : 0
+  fetch(url + `/allmessage/${limit}/${offset}`,{
+    headers : {
+        "content-Type" : 'application/json',
+        "Authorization": localStorage.getItem('token')
+      }
+  })
+  .then(res=>res.json())
+  .then(data=>{
+     reporthandler.disabled = false
+  reporthandler.innerHTML = 'گزارش'
+    allcount.innerHTML = `کل تعداد پیام ها  برابر است با ${data.count}`
+    console.log('dataallmessage :' , data )
+    localStorage.allmessage1 = JSON.stringify(data.data)
+
+  const allmessage = JSON.parse(localStorage?.allmessage1)
+let num = offset
+  allmessage.forEach((x,index) => {
+    tbody.insertAdjacentHTML('beforeend',`
+    <tr>
+      <td class="col-1">${++num}</td>
+      <td class="col-2">${x['user.fullName'] ?? "-"}</td>
+      <td class="col-1">${new Date(x.createdAt).toLocaleDateString('fa')}</td>
+      <td class="col-3">${x.message  ?? "-"}</td>
+      <td class="col-2">${x['admin.fullName']  ?? "-"}</td>
+      <td class="col-3">${x.replymessage  ?? "-"}</td>
+    </tr>
+    `)
+  });
+})
+.catch(er=>{
+       reporthandler.disabled = false
+  reporthandler.innerHTML = 'گزارش'
+  alpert(er?.message)
+ })
+ }
+ const reporthandler = document.querySelector('#reporthandler')
+ reporthandler.addEventListener('click' ,()=>messagehandler())
+ messagehandler()
+</script>
+<script src="./index.js"></script>
+<script src='./exit.js'></script> </body>
+</html>
